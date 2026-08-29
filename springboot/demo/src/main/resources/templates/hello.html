@@ -1,0 +1,15 @@
+<!-- src/main/resources/templates/hello.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello Page</title>
+</head>
+<body>
+    <nav>
+        <a th:href="@{/}">Home</a> |
+        <a th:href="@{/hello}">Hello</a>
+    </nav>
+
+    <h1>Halo, <span th:text="${nama}">User</span>!</h1>
+</body>
+</html>

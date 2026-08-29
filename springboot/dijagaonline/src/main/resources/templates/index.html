@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Database Monitoring Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2a;
+      --card-border: #1f2a44;
+      --primary: #38bdf8;
+      --danger: #ef4444;
+      --success: #22c55e;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #0f172a, var(--bg));
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1 {
+      margin: 0 0 6px 0;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* ===== Summary Cards ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #111827, #0b1220);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 18px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .card .title {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .card .value {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .card .trend {
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    .trend.up { color: var(--success); }
+    .trend.down { color: var(--danger); }
+
+    /* ===== Charts ===== */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .chart-card {
+      background: linear-gradient(145deg, #111827, #0b1220);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 18px 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .chart-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    canvas { max-height: 260px; }
+
+    /* ===== Connection Status ===== */
+    .full {
+      margin-bottom: 24px;
+    }
+
+    /* ===== Storage ===== */
+    .storage {
+      background: linear-gradient(145deg, #111827, #0b1220);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .storage-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .progress {
+      width: 100%;
+      height: 10px;
+      background: #020617;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Database Monitoring Dashboard</h1>
+    <div class="subtitle">High-level overview of your database performance</div>
+
+    <!-- Summary Cards -->
+    <div class="cards">
+      <div class="card">
+        <div class="title">Total Alerts</div>
+        <div class="value">18</div>
+        <div class="trend down">▼ 12% dari bulan lalu</div>
+      </div>
+      <div class="card">
+        <div class="title">Storage Used</div>
+        <div class="value">750 GB</div>
+        <div class="trend up">▲ 8% dari bulan lalu</div>
+      </div>
+      <div class="card">
+        <div class="title">Slow Queries</div>
+        <div class="value">48</div>
+        <div class="trend down">▼ 5% dari bulan lalu</div>
+      </div>
+      <div class="card">
+        <div class="title">Uptime</div>
+        <div class="value">99.6%</div>
+        <div class="trend up">▲ 0.3% dari bulan lalu</div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="grid-2">
+      <div class="chart-card">
+        <div class="chart-title">Alert Bulanan</div>
+        <canvas id="alertChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Slow Queries Bulanan</div>
+        <canvas id="slowChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Connection Status -->
+    <div class="chart-card full">
+      <div class="chart-title">Connection Status Report</div>
+      <canvas id="uptimeChart"></canvas>
+    </div>
+
+    <!-- Storage -->
+    <div class="storage">
+      <div class="chart-title">Storage Usage</div>
+      <div class="storage-info">
+        <span>750 GB digunakan dari 1000 GB</span>
+        <strong>75%</strong>
+      </div>
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+
+    new Chart(document.getElementById('alertChart'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          data: [12, 18, 8, 14, 22, 18],
+          backgroundColor: '#38bdf8',
+          borderRadius: 8
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, ticks: { color: '#9ca3af' } },
+          x: { ticks: { color: '#9ca3af' } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('slowChart'), {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          data: [45, 52, 40, 61, 55, 48],
+          borderColor: '#38bdf8',
+          backgroundColor: 'rgba(56,189,248,0.15)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { ticks: { color: '#9ca3af' } },
+          x: { ticks: { color: '#9ca3af' } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('uptimeChart'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          { label: 'Uptime', data: [99.8, 99.7, 99.9, 99.5, 99.8, 99.6], backgroundColor: '#38bdf8' },
+          { label: 'Downtime', data: [0.2, 0.3, 0.1, 0.5, 0.2, 0.4], backgroundColor: '#ef4444' }
+        ]
+      },
+      options: {
+        scales: {
+          y: { beginAtZero: true, max: 100, ticks: { color: '#9ca3af' } },
+          x: { ticks: { color: '#9ca3af' } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

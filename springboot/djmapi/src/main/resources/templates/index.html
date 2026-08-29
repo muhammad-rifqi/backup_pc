@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+</head>
+
+<body>
+    <div class="login-container">
+        <form method="POST" onsubmit="getValue(); return false;">
+            <p> <input type="text" id="id" placeholder="ID"> </p>
+            <p> <input type="text" id="name" placeholder="Name"> </p>
+            <p> <input type="text" id="email" placeholder="Email"> </p>
+            <p> <input type="submit" value="simpan"> </p>
+        </form>
+    </div>
+</body>
+<script>
+    function getValue() {
+        const a = document.getElementById("id").value;
+        const b = document.getElementById("name").value;
+        const c = document.getElementById("email").value;
+
+        fetch('http://localhost:8080/api/user/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                id: a,
+                name: b,
+                email: c,
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+
+    }
+</script>
+
+
+</html>
