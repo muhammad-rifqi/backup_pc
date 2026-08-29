@@ -1,0 +1,501 @@
+id,name,type_project,scale,start_date,end_date,status_project,created_at,last_updated_at
+1,Legacy Banking System Modernization,software_development,high,2015-01-15,2016-06-15,success,2015-01-10,2015-01-12
+2,Internal HR Portal v2,software_development,medium,2015-03-01,2015-12-31,success,2015-02-25,2015-03-02
+3,ERP System Cloud Migration,infrastructure_improvements,high,2015-05-10,2016-08-10,delayed,2015-05-05,2015-05-08
+4,Mobile Inventory Management App,software_development,medium,2015-07-01,2016-03-01,success,2015-06-25,2015-06-28
+5,Online Learning Platform v2,software_development,medium,2015-09-01,2016-09-01,partial,2015-08-25,2015-08-28
+6,Mobile Sales Tracking App v2,software_development,low,2015-02-10,2015-08-10,failed,2015-02-05,2015-02-08
+7,Data Warehouse to AWS Cloud,infrastructure_improvements,medium,2015-04-15,2016-01-15,delayed,2015-04-10,2015-04-12
+8,CRM System Cloud Edition,software_development,medium,2015-06-01,2016-03-01,success,2015-05-25,2015-06-02
+9,Email Server Migration to Office 365,infrastructure_improvements,medium,2015-08-01,2016-05-01,success,2015-07-25,2015-07-28
+10,Slack-like Collaboration Tool,software_development,medium,2015-10-01,2016-07-01,cancelled,2015-09-25,2015-09-28
+11,Cloud-Based Analytics Platform,data_analytics,high,2015-11-15,2016-11-15,success,2015-11-10,2015-11-12
+12,Mobile Dashboard with React Native,software_development,medium,2015-12-01,2016-08-01,delayed,2015-11-25,2015-11-28
+13,Docker Containerization Project,infrastructure_improvements,high,2016-01-10,2017-01-10,success,2016-01-05,2016-01-08
+14,HR System Microservices Architecture,software_development,medium,2016-02-15,2017-02-15,partial,2016-02-10,2016-02-12
+15,Payment Gateway with Node.js,software_development,medium,2016-03-01,2017-03-01,success,2016-02-25,2016-03-02
+16,Document Management with MongoDB,software_development,medium,2016-04-10,2016-12-10,failed,2016-04-05,2016-04-08
+17,CRM Migration to Salesforce,crm_implementation,high,2016-05-05,2017-05-05,delayed,2016-05-01,2016-05-03
+18,ERP with Spring Boot Framework,software_development,medium,2016-06-01,2017-04-01,success,2016-05-25,2016-06-02
+19,Email Archiving with AWS S3,infrastructure_improvements,medium,2016-07-10,2017-05-10,success,2016-07-05,2016-07-08
+20,Remote Work Tool with WebRTC,software_development,medium,2016-08-01,2017-06-01,cancelled,2016-07-25,2016-07-28
+21,Big Data Platform with Apache Spark,data_analytics,high,2016-09-15,2017-09-15,success,2016-09-10,2016-09-12
+22,Cloud Inventory with Kubernetes,infrastructure_improvements,medium,2016-10-01,2017-08-01,delayed,2016-09-25,2016-09-28
+23,Mobile Loyalty App with Flutter,software_development,medium,2016-11-10,2017-09-10,success,2016-11-05,2016-11-08
+24,Legacy System Containerization,infrastructure_improvements,high,2016-12-01,2017-10-01,partial,2016-11-25,2016-11-28
+25,E-commerce Platform with Vue.js,software_development,medium,2017-01-15,2017-11-15,success,2017-01-10,2017-01-12
+26,Enterprise Mobility Management,software_development,medium,2017-02-01,2017-10-01,failed,2017-01-25,2017-01-28
+27,VDI with VMware Horizon,infrastructure_improvements,high,2017-03-10,2018-01-10,delayed,2017-03-05,2017-03-08
+28,Customer Feedback Portal,software_development,medium,2017-04-01,2017-12-01,success,2017-03-25,2017-03-28
+29,Network Security with Palo Alto,infrastructure_improvements,medium,2017-05-15,2018-01-15,success,2017-05-10,2017-05-12
+30,Social Collaboration with React,software_development,medium,2017-06-01,2018-02-01,cancelled,2017-05-25,2017-05-28
+31,AI Customer Analytics Platform,ai_ml_project,high,2017-07-10,2018-05-10,success,2017-07-05,2017-07-08
+32,Mobile Payment with Square API,software_development,medium,2017-08-01,2018-04-01,delayed,2017-07-25,2017-07-28
+33,IoT Platform with AWS IoT Core,iot_implementation,high,2017-09-15,2018-07-15,success,2017-09-10,2017-09-12
+34,Legacy Data Migration to Azure,infrastructure_improvements,medium,2017-10-01,2018-06-01,partial,2017-09-25,2017-09-28
+35,Payment Security with PCI DSS,security_compliance,medium,2017-11-10,2018-09-10,success,2017-11-05,2017-11-08
+36,Chatbot with Dialogflow,ai_ml_project,medium,2015-01-20,2015-09-20,failed,2015-01-15,2015-01-18
+37,Containerization with Docker Swarm,infrastructure_improvements,high,2015-03-15,2016-01-15,delayed,2015-03-10,2015-03-12
+38,Real-Time Feedback with Socket.io,software_development,medium,2015-05-01,2016-01-01,success,2015-04-25,2015-04-28
+39,Network Automation with Ansible,infrastructure_improvements,medium,2015-06-15,2016-03-15,success,2015-06-10,2015-06-12
+40,Social Analytics with Python Pandas,data_analytics,medium,2015-08-01,2016-04-01,cancelled,2015-07-25,2015-07-28
+41,Cloud CRM with Salesforce Integration,crm_implementation,high,2015-09-20,2016-07-20,success,2015-09-15,2015-09-18
+42,Mobile Banking with React Native,software_development,medium,2015-11-01,2016-07-01,delayed,2015-10-25,2015-10-28
+43,Enterprise IoT with Azure IoT Hub,iot_implementation,high,2016-01-20,2016-11-20,success,2016-01-15,2016-01-18
+44,Legacy to Microservices Architecture,infrastructure_improvements,medium,2016-03-01,2017-01-01,partial,2016-02-25,2016-02-28
+45,E-commerce Analytics with Google Analytics,data_analytics,medium,2016-04-15,2017-02-15,success,2016-04-10,2016-04-12
+46,AI Chatbot with TensorFlow,ai_ml_project,medium,2016-06-01,2017-02-01,failed,2016-05-25,2016-05-28
+47,CI/CD Pipeline with Jenkins,infrastructure_improvements,high,2016-07-20,2017-05-20,delayed,2016-07-15,2016-07-18
+48,Customer Portal with Angular 2,software_development,medium,2016-09-01,2017-05-01,success,2016-08-25,2016-08-28
+49,Zero Trust with Zscaler,security_compliance,medium,2016-10-15,2017-06-15,success,2016-10-10,2016-10-12
+50,Social Media Analytics with Power BI,data_analytics,medium,2016-12-01,2017-08-01,cancelled,2016-11-25,2016-11-28
+51,Microservices with Kubernetes,software_development,high,2017-01-20,2017-11-20,success,2017-01-15,2017-01-18
+52,Mobile Health App with Flutter,software_development,medium,2017-03-01,2018-01-01,delayed,2017-02-25,2017-02-28
+53,IoT Analytics with AWS Kinesis,iot_implementation,high,2017-04-15,2018-02-15,success,2017-04-10,2017-04-12
+54,Legacy App Containerization,infrastructure_improvements,medium,2017-06-01,2018-04-01,partial,2017-05-25,2017-05-28
+55,Real-Time Analytics with Apache Kafka,data_analytics,medium,2017-07-20,2018-05-20,success,2017-07-15,2017-07-18
+56,AI Assistant with Rasa Framework,ai_ml_project,medium,2015-02-01,2015-10-01,failed,2015-01-25,2015-01-28
+57,CI/CD Pipeline with GitLab CI,infrastructure_improvements,high,2015-04-10,2016-02-10,delayed,2015-04-05,2015-04-08
+58,Customer Portal v2 with Vue.js,software_development,medium,2015-06-01,2016-02-01,success,2015-05-25,2015-05-28
+59,Security Framework with CrowdStrike,security_compliance,medium,2015-07-15,2016-03-15,success,2015-07-10,2015-07-12
+60,Social Tool with MERN Stack,software_development,medium,2015-09-01,2016-05-01,cancelled,2015-08-25,2015-08-28
+61,Machine Learning Platform with Scikit-learn,ai_ml_project,high,2015-10-20,2016-08-20,success,2015-10-15,2015-10-18
+62,Mobile Health v2 with React Native,software_development,medium,2015-12-01,2016-08-01,delayed,2015-11-25,2015-11-28
+63,IoT Integration Hub with MQTT,iot_implementation,high,2016-02-15,2016-12-15,success,2016-02-10,2016-02-12
+64,Container Orchestration with Kubernetes,infrastructure_improvements,medium,2016-04-01,2017-02-01,partial,2016-03-25,2016-03-28
+65,Customer Analytics with Tableau,data_analytics,medium,2016-05-20,2017-03-20,success,2016-05-15,2016-05-18
+66,AI Chatbot v2 with Microsoft Bot Framework,ai_ml_project,medium,2016-07-01,2017-03-01,failed,2016-06-25,2016-06-28
+67,CI/CD v2 with Travis CI,infrastructure_improvements,high,2016-08-15,2017-06-15,delayed,2016-08-10,2016-08-12
+68,Feedback Portal v2 with Express.js,software_development,medium,2016-10-01,2017-06-01,success,2016-09-25,2016-09-28
+69,Zero Trust v2 with Duo Security,security_compliance,medium,2016-11-20,2017-09-20,success,2016-11-15,2016-11-18
+70,Social Platform v2 with Meteor.js,software_development,medium,2017-01-01,2017-09-01,cancelled,2016-12-25,2016-12-28
+71,AI Support with IBM Watson,ai_ml_project,high,2017-02-15,2017-12-15,success,2017-02-10,2017-02-12
+72,Mobile Health v3 with Ionic Framework,software_development,medium,2017-04-01,2018-02-01,delayed,2017-03-25,2017-03-28
+73,IoT Data Hub with Google Cloud IoT,iot_implementation,high,2017-05-20,2018-03-20,success,2017-05-15,2017-05-18
+74,Microservices Migration with Istio,infrastructure_improvements,medium,2017-07-01,2018-05-01,partial,2017-06-25,2017-06-28
+75,Customer Behavior Analytics with Mixpanel,data_analytics,medium,2017-08-15,2018-06-15,success,2017-08-10,2017-08-12
+76,AI Assistant v3 with Amazon Lex,ai_ml_project,medium,2015-03-15,2015-11-15,failed,2015-03-10,2015-03-12
+77,CI/CD v3 with CircleCI,infrastructure_improvements,high,2015-05-01,2016-01-01,delayed,2015-04-25,2015-04-28
+78,Customer Portal v3 with Ember.js,software_development,medium,2015-06-20,2016-02-20,success,2015-06-15,2015-06-18
+79,Security v3 with Cloudflare WAF,security_compliance,medium,2015-08-01,2016-04-01,success,2015-07-25,2015-07-28
+80,Social Tool v3 with Backbone.js,software_development,medium,2015-09-20,2016-05-20,cancelled,2015-09-15,2015-09-18
+81,API Gateway with Kong,infrastructure_improvements,high,2015-11-01,2016-07-01,success,2015-10-25,2015-10-28
+82,Mobile App with Xamarin,software_development,medium,2015-12-15,2016-08-15,delayed,2015-12-10,2015-12-12
+83,Data Lake with Hadoop,data_analytics,high,2016-01-01,2016-11-01,success,2015-12-25,2015-12-28
+84,Monitoring with Prometheus,infrastructure_improvements,medium,2016-02-20,2016-10-20,partial,2016-02-15,2016-02-18
+85,Log Analysis with ELK Stack,data_analytics,medium,2016-04-01,2017-02-01,success,2016-03-25,2016-03-28
+86,Mobile Game with Unity,software_development,medium,2016-05-15,2017-01-15,failed,2016-05-10,2016-05-12
+87,Service Mesh with Linkerd,infrastructure_improvements,high,2016-07-01,2017-05-01,delayed,2016-06-25,2016-06-28
+88,E-commerce with Magento,software_development,medium,2016-08-20,2017-06-20,success,2016-08-15,2016-08-18
+89,Backup with Veeam,infrastructure_improvements,medium,2016-10-01,2017-06-01,success,2016-09-25,2016-09-28
+90,CRM with HubSpot,crm_implementation,medium,2016-11-15,2017-09-15,cancelled,2016-11-10,2016-11-12
+91,Database Migration to PostgreSQL,infrastructure_improvements,high,2017-01-01,2017-09-01,success,2016-12-25,2016-12-28
+92,Mobile App with NativeScript,software_development,medium,2017-02-15,2017-10-15,delayed,2017-02-10,2017-02-12
+93,Big Data with Apache Beam,data_analytics,high,2017-04-01,2018-02-01,success,2017-03-25,2017-03-28
+94,Serverless with AWS Lambda,infrastructure_improvements,medium,2017-05-20,2018-01-20,partial,2017-05-15,2017-05-18
+95,Analytics with Apache Druid,data_analytics,medium,2017-07-01,2018-05-01,success,2017-06-25,2017-06-28
+96,Mobile Payment with Stripe,software_development,medium,2017-08-15,2018-04-15,failed,2017-08-10,2017-08-12
+97,CI/CD v4 with Azure Pipelines,infrastructure_improvements,high,2017-10-01,2018-08-01,delayed,2017-09-25,2017-09-28
+98,Web App with Svelte,software_development,medium,2017-11-20,2018-09-20,success,2017-11-15,2017-11-18
+99,Security v4 with Prisma Cloud,security_compliance,medium,2017-12-15,2018-08-15,success,2017-12-10,2017-12-12
+100,Blockchain POC with Ethereum,blockchain_project,high,2017-12-20,2018-10-20,cancelled,2017-12-15,2017-12-
+101,AI-Powered Supply Chain Optimization,ai_ml_project,high,2018-01-15,2019-04-15,success,2018-01-10,2018-01-12
+102,Cloud-Native Microservices Platform,software_development,high,2018-02-01,2019-02-01,delayed,2018-01-25,2018-01-28
+103,Blockchain Digital Identity System,blockchain_project,high,2018-03-10,2019-03-10,partial,2018-03-05,2018-03-08
+104,Mobile Banking with Biometric Auth,software_development,medium,2018-04-01,2019-01-01,success,2018-03-25,2018-03-28
+105,Real-time Fraud Detection System,ai_ml_project,high,2018-05-15,2019-05-15,success,2018-05-10,2018-05-12
+106,IoT Smart Factory Implementation,iot_implementation,high,2018-06-01,2019-08-01,failed,2018-05-25,2018-05-28
+107,Serverless E-commerce Platform,software_development,medium,2018-07-10,2019-04-10,delayed,2018-07-05,2018-07-08
+108,Data Lake Modernization,data_analytics,high,2018-08-01,2019-08-01,success,2018-07-25,2018-07-28
+109,Zero Trust Security Implementation,security_compliance,high,2018-09-15,2019-09-15,success,2018-09-10,2018-09-12
+110,VR Training Simulation Platform,software_development,medium,2018-10-01,2019-07-01,cancelled,2018-09-25,2018-09-28
+111,AI-Based Customer Churn Prediction,ai_ml_project,medium,2018-11-10,2019-08-10,success,2018-11-05,2018-11-08
+112,Multi-cloud Strategy Implementation,infrastructure_improvements,high,2018-12-01,2019-12-01,delayed,2018-11-25,2018-11-28
+113,Edge Computing for Retail Analytics,iot_implementation,medium,2019-01-15,2019-10-15,success,2019-01-10,2019-01-12
+114,Digital Twin for Manufacturing,software_development,high,2019-02-01,2020-02-01,partial,2019-01-25,2019-01-28
+115,API Economy Platform,software_development,medium,2019-03-10,2019-12-10,success,2019-03-05,2019-03-08
+116,Quantum Computing Research,research_development,high,2019-04-01,2020-04-01,failed,2019-03-25,2019-03-28
+117,5G Network Readiness,infrastructure_improvements,high,2019-05-15,2020-03-15,delayed,2019-05-10,2019-05-12
+118,AI-Powered Content Recommendation,ai_ml_project,medium,2019-06-01,2020-02-01,success,2019-05-25,2019-05-28
+119,Blockchain Supply Chain Tracking,blockchain_project,high,2019-07-10,2020-05-10,success,2019-07-05,2019-07-08
+120,Cloud Cost Optimization Platform,software_development,medium,2019-08-01,2020-04-01,cancelled,2019-07-25,2019-07-28
+121,Machine Learning Operations Platform,ai_ml_project,high,2019-09-15,2020-06-15,success,2019-09-10,2019-09-12
+122,DevSecOps Implementation,security_compliance,medium,2019-10-01,2020-06-01,delayed,2019-09-25,2019-09-28
+123,IoT Predictive Maintenance,iot_implementation,medium,2019-11-10,2020-07-10,success,2019-11-05,2019-11-08
+124,Data Mesh Architecture,data_analytics,high,2019-12-01,2020-09-01,partial,2019-11-25,2019-11-28
+125,AI Ethics and Governance,ai_ml_project,medium,2018-01-20,2018-10-20,success,2018-01-15,2018-01-18
+126,Cloud Migration Assessment,infrastructure_improvements,medium,2018-02-15,2018-11-15,delayed,2018-02-10,2018-02-12
+127,Digital Workplace Transformation,software_development,high,2018-03-20,2019-01-20,success,2018-03-15,2018-03-18
+128,Blockchain Smart Contracts,blockchain_project,medium,2018-04-25,2019-01-25,partial,2018-04-20,2018-04-23
+129,AI-Powered Document Processing,ai_ml_project,medium,2018-05-30,2019-02-28,success,2018-05-25,2018-05-28
+130,IoT Environmental Monitoring,iot_implementation,medium,2018-07-05,2019-04-05,failed,2018-06-30,2018-07-03
+131,Microfrontends Architecture,software_development,medium,2018-08-10,2019-05-10,delayed,2018-08-05,2018-08-08
+132,Data Quality Management Platform,data_analytics,medium,2018-09-15,2019-06-15,success,2018-09-10,2018-09-12
+133,Cloud Security Posture Management,security_compliance,high,2018-10-20,2019-07-20,success,2018-10-15,2018-10-18
+134,AR Shopping Experience,software_development,medium,2018-11-25,2019-08-25,cancelled,2018-11-20,2018-11-23
+135,AI-Based Recruitment System,ai_ml_project,medium,2018-12-30,2019-09-30,success,2018-12-25,2018-12-28
+136,Hybrid Cloud Management,infrastructure_improvements,high,2019-01-05,2019-10-05,delayed,2019-01-01,2019-01-04
+137,Blockchain Digital Assets,blockchain_project,high,2019-02-10,2020-01-10,partial,2019-02-05,2019-02-08
+138,Edge AI for Quality Control,ai_ml_project,medium,2019-03-15,2019-12-15,success,2019-03-10,2019-03-12
+139,IoT Fleet Management System,iot_implementation,medium,2019-04-20,2020-01-20,failed,2019-04-15,2019-04-18
+140,Progressive Web App Platform,software_development,medium,2019-05-25,2020-02-25,delayed,2019-05-20,2019-05-23
+141,Real-time Data Streaming,data_analytics,high,2019-06-30,2020-03-30,success,2019-06-25,2019-06-28
+142,Cloud-Native Security,security_compliance,medium,2019-08-05,2020-04-05,success,2019-07-31,2019-08-03
+143,AI-Powered Chatbot Platform,ai_ml_project,medium,2019-09-10,2020-05-10,cancelled,2019-09-05,2019-09-08
+144,Blockchain Cross-border Payments,blockchain_project,high,2019-10-15,2020-07-15,success,2019-10-10,2019-10-12
+145,IoT Smart Agriculture,iot_implementation,medium,2019-11-20,2020-08-20,partial,2019-11-15,2019-11-18
+146,Low-Code Development Platform,software_development,medium,2019-12-25,2020-09-25,success,2019-12-20,2019-12-23
+147,Data Privacy Compliance,data_governance,high,2018-01-25,2018-10-25,success,2018-01-20,2018-01-23
+148,Cloud Financial Operations,infrastructure_improvements,medium,2018-02-28,2018-11-28,delayed,2018-02-23,2018-02-26
+149,AI-Powered Market Analysis,ai_ml_project,medium,2018-04-05,2019-01-05,success,2018-03-31,2018-04-03
+150,Blockchain Voting System,blockchain_project,high,2018-05-10,2019-02-10,partial,2018-05-05,2018-05-08
+151,IoT Smart City Infrastructure,iot_implementation,high,2018-06-15,2019-03-15,failed,2018-06-10,2018-06-13
+152,Headless CMS Implementation,software_development,medium,2018-07-20,2019-04-20,delayed,2018-07-15,2018-07-18
+153,Predictive Analytics Platform,data_analytics,medium,2018-08-25,2019-05-25,success,2018-08-20,2018-08-23
+154,Identity and Access Management,security_compliance,high,2018-09-30,2019-06-30,success,2018-09-25,2018-09-28
+155,AI-Powered Personalization,ai_ml_project,medium,2018-11-05,2019-08-05,cancelled,2018-10-31,2018-11-03
+156,Multi-tenant SaaS Platform,software_development,high,2018-12-10,2019-09-10,success,2018-12-05,2018-12-08
+157,Cloud Disaster Recovery,infrastructure_improvements,medium,2019-01-15,2019-10-15,delayed,2019-01-10,2019-01-13
+158,Blockchain Digital Certificates,blockchain_project,medium,2019-02-20,2019-11-20,partial,2019-02-15,2019-02-18
+159,Edge Computing for Healthcare,iot_implementation,high,2019-03-25,2020-02-25,success,2019-03-20,2019-03-23
+160,Microservices Monitoring,software_development,medium,2019-04-30,2020-01-30,failed,2019-04-25,2019-04-28
+161,Data Catalog and Discovery,data_analytics,medium,2019-06-05,2020-03-05,delayed,2019-05-31,2019-06-03
+162,Cloud Workload Protection,security_compliance,medium,2019-07-10,2020-04-10,success,2019-07-05,2019-07-08
+163,AI-Powered Voice Assistant,ai_ml_project,medium,2019-08-15,2020-05-15,success,2019-08-10,2019-08-12
+164,Blockchain Royalty Management,blockchain_project,medium,2019-09-20,2020-06-20,cancelled,2019-09-15,2019-09-18
+165,IoT Energy Management,iot_implementation,medium,2019-10-25,2020-07-25,partial,2019-10-20,2019-10-23
+166,Jamstack E-commerce,software_development,medium,2019-11-30,2020-08-30,success,2019-11-25,2019-11-28
+167,Data Lineage and Provenance,data_governance,high,2018-02-05,2018-11-05,success,2018-01-31,2018-02-03
+168,Cloud Network Optimization,infrastructure_improvements,medium,2018-03-12,2018-12-12,delayed,2018-03-07,2018-03-10
+169,AI-Powered Risk Assessment,ai_ml_project,medium,2018-04-18,2019-01-18,success,2018-04-13,2018-04-16
+170,Blockchain Carbon Credits,blockchain_project,high,2018-05-23,2019-02-23,partial,2018-05-18,2018-05-21
+171,IoT Water Quality Monitoring,iot_implementation,medium,2018-06-28,2019-03-28,failed,2018-06-23,2018-06-26
+172,Server-Side Rendering Platform,software_development,medium,2018-08-03,2019-05-03,delayed,2018-07-29,2018-08-01
+173,Real-time Business Intelligence,data_analytics,medium,2018-09-08,2019-06-08,success,2018-09-03,2018-09-06
+174,Zero-Day Vulnerability Management,security_compliance,high,2018-10-13,2019-07-13,success,2018-10-08,2018-10-11
+175,AI-Powered Code Review,ai_ml_project,medium,2018-11-18,2019-08-18,cancelled,2018-11-13,2018-11-16
+176,Cloud-Native Database,software_development,high,2018-12-23,2019-09-23,success,2018-12-18,2018-12-21
+177,Hybrid Multi-cloud Networking,infrastructure_improvements,medium,2019-01-28,2019-10-28,delayed,2019-01-23,2019-01-26
+178,Blockchain Intellectual Property,blockchain_project,medium,2019-03-05,2019-12-05,partial,2019-02-28,2019-03-03
+179,Edge AI for Retail,iot_implementation,high,2019-04-10,2020-03-10,success,2019-04-05,2019-04-08
+180,GraphQL API Gateway,software_development,medium,2019-05-15,2020-02-15,failed,2019-05-10,2019-05-13
+181,Data Anonymization Platform,data_analytics,medium,2019-06-20,2020-03-20,delayed,2019-06-15,2019-06-18
+182,Cloud Security Automation,security_compliance,medium,2019-07-25,2020-04-25,success,2019-07-20,2019-07-23
+183,AI-Powered Image Recognition,ai_ml_project,medium,2019-08-30,2020-05-30,success,2019-08-25,2019-08-28
+184,Blockchain Medical Records,blockchain_project,high,2019-10-05,2020-07-05,cancelled,2019-09-30,2019-10-03
+185,IoT Predictive Analytics,iot_implementation,medium,2019-11-10,2020-08-10,partial,2019-11-05,2019-11-08
+186,WebAssembly Applications,software_development,medium,2019-12-15,2020-09-15,success,2019-12-10,2019-12-13
+187,Data Ethics Framework,data_governance,high,2018-02-15,2018-11-15,success,2018-02-10,2018-02-13
+188,Cloud Cost Analytics,infrastructure_improvements,medium,2018-03-22,2018-12-22,delayed,2018-03-17,2018-03-20
+189,AI-Powered Sentiment Analysis,ai_ml_project,medium,2018-04-27,2019-01-27,success,2018-04-22,2018-04-25
+190,Blockchain Real Estate,blockchain_project,high,2018-06-02,2019-03-02,partial,2018-05-28,2018-05-31
+191,IoT Smart Logistics,iot_implementation,medium,2018-07-07,2019-04-07,failed,2018-07-02,2018-07-05
+192,Progressive Web App E-commerce,software_development,medium,2018-08-12,2019-05-12,delayed,2018-08-07,2018-08-10
+193,Real-time Customer 360,data_analytics,medium,2018-09-17,2019-06-17,success,2018-09-12,2018-09-15
+194,Cloud Security Assessment,security_compliance,high,2018-10-22,2019-07-22,success,2018-10-17,2018-10-20
+195,AI-Powered Translation Service,ai_ml_project,medium,2018-11-27,2019-08-27,cancelled,2018-11-22,2018-11-25
+196,Event-Driven Architecture,software_development,high,2018-12-02,2019-09-02,success,2018-11-27,2018-11-30
+197,Multi-cloud Load Balancing,infrastructure_improvements,medium,2019-01-07,2019-10-07,delayed,2019-01-02,2019-01-05
+198,Blockchain Digital Identity v2,blockchain_project,medium,2019-02-12,2019-11-12,partial,2019-02-07,2019-02-10
+199,Edge Computing for Automotive,iot_implementation,high,2019-03-19,2020-02-19,success,2019-03-14,2019-03-17
+200,Serverless Microservices,software_development,medium,2019-04-24,2020-01-24,failed,2019-04-19,2019-04-22
+201,AI-Powered Pandemic Response System,ai_ml_project,high,2020-01-15,2021-03-15,success,2020-01-10,2020-01-12
+202,Remote Work Infrastructure Scaling,infrastructure_improvements,high,2020-02-01,2021-01-01,delayed,2020-01-25,2020-01-28
+203,Contact Tracing Mobile App,software_development,high,2020-03-10,2020-09-10,success,2020-03-05,2020-03-08
+204,Digital Healthcare Platform,software_development,high,2020-04-01,2021-06-01,partial,2020-03-25,2020-03-28
+205,Supply Chain Resilience System,ai_ml_project,high,2020-05-15,2021-05-15,success,2020-05-10,2020-05-12
+206,E-learning Platform Expansion,software_development,medium,2020-06-01,2021-04-01,failed,2020-05-25,2020-05-28
+207,Cloud Cost Optimization Post-COVID,infrastructure_improvements,medium,2020-07-10,2021-02-10,delayed,2020-07-05,2020-07-08
+208,AI-Based Drug Discovery Platform,ai_ml_project,high,2020-08-01,2021-12-01,success,2020-07-25,2020-07-28
+209,Zero Trust Remote Access,security_compliance,high,2020-09-15,2021-05-15,success,2020-09-10,2020-09-12
+210,Digital Government Services,software_development,high,2020-10-01,2021-10-01,cancelled,2020-09-25,2020-09-28
+211,AI-Powered Vaccine Distribution,ai_ml_project,high,2020-11-10,2021-08-10,success,2020-11-05,2020-11-08
+212,Hybrid Work Collaboration Platform,software_development,medium,2020-12-01,2021-08-01,delayed,2020-11-25,2020-11-28
+213,Edge Computing for Telemedicine,iot_implementation,medium,2021-01-15,2021-10-15,success,2021-01-10,2021-01-12
+214,Blockchain Vaccine Passport,blockchain_project,high,2021-02-01,2021-12-01,partial,2021-01-25,2021-01-28
+215,API-First Business Strategy,software_development,medium,2021-03-10,2021-11-10,success,2021-03-05,2021-03-08
+216,Quantum Machine Learning Research,research_development,high,2021-04-01,2022-06-01,failed,2021-03-25,2021-03-28
+217,5G Enterprise Deployment,infrastructure_improvements,high,2021-05-15,2022-03-15,delayed,2021-05-10,2021-05-12
+218,AI-Powered Mental Health Platform,ai_ml_project,medium,2021-06-01,2022-02-01,success,2021-05-25,2021-05-28
+219,Blockchain Supply Chain Finance,blockchain_project,high,2021-07-10,2022-05-10,success,2021-07-05,2021-07-08
+220,Sustainable Cloud Computing,infrastructure_improvements,medium,2021-08-01,2022-04-01,cancelled,2021-07-25,2021-07-28
+221,Federated Learning Platform,ai_ml_project,high,2021-09-15,2022-06-15,success,2021-09-10,2021-09-12
+222,DevSecOps Automation,security_compliance,medium,2021-10-01,2022-06-01,delayed,2021-09-25,2021-09-28
+223,IoT for Smart Healthcare,iot_implementation,medium,2021-11-10,2022-07-10,success,2021-11-05,2021-11-08
+224,Data Mesh Implementation,data_analytics,high,2021-12-01,2022-09-01,partial,2021-11-25,2021-11-28
+225,AI Ethics Compliance Platform,ai_ml_project,medium,2020-01-20,2020-10-20,success,2020-01-15,2020-01-18
+226,Cloud Migration Acceleration,infrastructure_improvements,medium,2020-02-15,2020-11-15,delayed,2020-02-10,2020-02-12
+227,Digital Banking Transformation,software_development,high,2020-03-20,2021-01-20,success,2020-03-15,2020-03-18
+228,DeFi Platform Development,blockchain_project,high,2020-04-25,2021-01-25,partial,2020-04-20,2020-04-23
+229,AI-Powered Clinical Trials,ai_ml_project,high,2020-05-30,2021-02-28,success,2020-05-25,2020-05-28
+230,IoT for Remote Monitoring,iot_implementation,medium,2020-07-05,2021-04-05,failed,2020-06-30,2020-07-03
+231,Microservices Modernization,software_development,medium,2020-08-10,2021-05-10,delayed,2020-08-05,2020-08-08
+232,Real-time Supply Chain Analytics,data_analytics,medium,2020-09-15,2021-06-15,success,2020-09-10,2020-09-12
+233,Cloud Security Posture Management,security_compliance,high,2020-10-20,2021-07-20,success,2020-10-15,2020-10-18
+234,AR Remote Assistance,software_development,medium,2020-11-25,2021-08-25,cancelled,2020-11-20,2020-11-23
+235,AI-Powered Customer Service,ai_ml_project,medium,2020-12-30,2021-09-30,success,2020-12-25,2020-12-28
+236,Multi-cloud Data Governance,infrastructure_improvements,high,2021-01-05,2021-10-05,delayed,2021-01-01,2021-01-04
+237,NFT Marketplace Platform,blockchain_project,high,2021-02-10,2022-01-10,partial,2021-02-05,2021-02-08
+238,Edge AI for Manufacturing,ai_ml_project,medium,2021-03-15,2021-12-15,success,2021-03-10,2021-03-12
+239,IoT Predictive Maintenance,iot_implementation,medium,2021-04-20,2022-01-20,failed,2021-04-15,2021-04-18
+240,Serverless Data Pipeline,software_development,medium,2021-05-25,2022-02-25,delayed,2021-05-20,2021-05-23
+241,Real-time Risk Analytics,data_analytics,high,2021-06-30,2022-03-30,success,2021-06-25,2021-06-28
+242,Zero Trust Architecture,security_compliance,medium,2021-08-05,2022-04-05,success,2021-07-31,2021-08-03
+243,AI-Powered Content Generation,ai_ml_project,medium,2021-09-10,2022-05-10,cancelled,2021-09-05,2021-09-08
+244,Blockchain Identity Management,blockchain_project,high,2021-10-15,2022-07-15,success,2021-10-10,2021-10-12
+245,IoT Smart Agriculture,iot_implementation,medium,2021-11-20,2022-08-20,partial,2021-11-15,2021-11-18
+246,Low-code Business Apps,software_development,medium,2021-12-25,2022-09-25,success,2021-12-20,2021-12-23
+247,Data Privacy Automation,data_governance,high,2020-01-25,2020-10-25,success,2020-01-20,2020-01-23
+248,Cloud Financial Management,infrastructure_improvements,medium,2020-02-28,2020-11-28,delayed,2020-02-23,2020-02-26
+249,AI-Powered Market Research,ai_ml_project,medium,2020-04-05,2021-01-05,success,2020-03-31,2020-04-03
+250,Blockchain Voting System,blockchain_project,high,2020-05-10,2021-02-10,partial,2020-05-05,2020-05-08
+251,IoT Smart City Platform,iot_implementation,high,2020-06-15,2021-03-15,failed,2020-06-10,2020-06-13
+252,Headless Commerce Platform,software_development,medium,2020-07-20,2021-04-20,delayed,2020-07-15,2020-07-18
+253,Predictive Maintenance AI,data_analytics,medium,2020-08-25,2021-05-25,success,2020-08-20,2020-08-23
+254,Identity Governance Platform,security_compliance,high,2020-09-30,2021-06-30,success,2020-09-25,2020-09-28
+255,AI-Powered Recommendations,ai_ml_project,medium,2020-11-05,2021-08-05,cancelled,2020-10-31,2020-11-03
+256,Multi-tenant Analytics Platform,software_development,high,2020-12-10,2021-09-10,success,2020-12-05,2020-12-08
+257,Cloud Disaster Recovery,infrastructure_improvements,medium,2021-01-15,2021-10-15,delayed,2021-01-10,2021-01-13
+258,Blockchain Digital Assets,blockchain_project,medium,2021-02-20,2021-11-20,partial,2021-02-15,2021-02-18
+259,Edge Computing for Retail,iot_implementation,high,2021-03-25,2022-02-25,success,2021-03-20,2021-03-23
+260,Microservices Observability,software_development,medium,2021-04-30,2022-01-30,failed,2021-04-25,2021-04-28
+261,Data Catalog Modernization,data_analytics,medium,2021-06-05,2022-03-05,delayed,2021-05-31,2021-06-03
+262,Cloud Workload Security,security_compliance,medium,2021-07-10,2022-04-10,success,2021-07-05,2021-07-08
+263,AI-Powered Voice Interface,ai_ml_project,medium,2021-08-15,2022-05-15,success,2021-08-10,2021-08-12
+264,Blockchain Royalty System,blockchain_project,medium,2021-09-20,2022-06-20,cancelled,2021-09-15,2021-09-18
+265,IoT Energy Optimization,iot_implementation,medium,2021-10-25,2022-07-25,partial,2021-10-20,2021-10-23
+266,Jamstack E-commerce Platform,software_development,medium,2021-11-30,2022-08-30,success,2021-11-25,2021-11-28
+267,Data Lineage Platform,data_governance,high,2020-02-05,2020-11-05,success,2020-01-31,2020-02-03
+268,Cloud Network Security,infrastructure_improvements,medium,2020-03-12,2020-12-12,delayed,2020-03-07,2020-03-10
+269,AI-Powered Fraud Detection,ai_ml_project,medium,2020-04-18,2021-01-18,success,2020-04-13,2020-04-16
+270,Blockchain Carbon Trading,blockchain_project,high,2020-05-23,2021-02-23,partial,2020-05-18,2020-05-21
+271,IoT Water Management,iot_implementation,medium,2020-06-28,2021-03-28,failed,2020-06-23,2020-06-26
+272,Server-Side Rendering Platform,software_development,medium,2020-08-03,2021-05-03,delayed,2020-07-29,2020-08-01
+273,Real-time Business Intelligence,data_analytics,medium,2020-09-08,2021-06-08,success,2020-09-03,2020-09-06
+274,Zero-Day Protection System,security_compliance,high,2020-10-13,2021-07-13,success,2020-10-08,2020-10-11
+275,AI-Powered Code Generation,ai_ml_project,medium,2020-11-18,2021-08-18,cancelled,2020-11-13,2020-11-16
+276,Cloud-Native Database Platform,software_development,high,2020-12-23,2021-09-23,success,2020-12-18,2020-12-21
+277,Hybrid Cloud Networking,infrastructure_improvements,medium,2021-01-28,2021-10-28,delayed,2021-01-23,2021-01-26
+278,Blockchain IP Management,blockchain_project,medium,2021-03-05,2021-12-05,partial,2021-02-28,2021-03-03
+279,Edge AI for Automotive,iot_implementation,high,2021-04-10,2022-03-10,success,2021-04-05,2021-04-08
+280,GraphQL Federation,software_development,medium,2021-05-15,2022-02-15,failed,2021-05-10,2021-05-13
+281,Data Anonymization Platform,data_analytics,medium,2021-06-20,2022-03-20,delayed,2021-06-15,2021-06-18
+282,Cloud Security Automation,security_compliance,medium,2021-07-25,2022-04-25,success,2021-07-20,2021-07-23
+283,AI-Powered Image Analysis,ai_ml_project,medium,2021-08-30,2022-05-30,success,2021-08-25,2021-08-28
+284,Blockchain Healthcare Records,blockchain_project,high,2021-10-05,2022-07-05,cancelled,2021-09-30,2021-10-03
+285,IoT Predictive Analytics,iot_implementation,medium,2021-11-10,2022-08-10,partial,2021-11-05,2021-11-08
+286,WebAssembly Applications,software_development,medium,2021-12-15,2022-09-15,success,2021-12-10,2021-12-13
+287,Data Ethics Framework,data_governance,high,2020-02-15,2020-11-15,success,2020-02-10,2020-02-13
+288,Cloud Cost Analytics Platform,infrastructure_improvements,medium,2020-03-22,2020-12-22,delayed,2020-03-17,2020-03-20
+289,AI-Powered Social Analytics,ai_ml_project,medium,2020-04-27,2021-01-27,success,2020-04-22,2020-04-25
+290,Blockchain Real Estate Platform,blockchain_project,high,2020-06-02,2021-03-02,partial,2020-05-28,2020-05-31
+291,IoT Smart Logistics,iot_implementation,medium,2020-07-07,2021-04-07,failed,2020-07-02,2020-07-05
+292,Progressive Web App Platform,software_development,medium,2020-08-12,2021-05-12,delayed,2020-08-07,2020-08-10
+293,Real-time Customer Analytics,data_analytics,medium,2020-09-17,2021-06-17,success,2020-09-12,2020-09-15
+294,Cloud Security Assessment,security_compliance,high,2020-10-22,2021-07-22,success,2020-10-17,2020-10-20
+295,AI-Powered Language Translation,ai_ml_project,medium,2020-11-27,2021-08-27,cancelled,2020-11-22,2020-11-25
+296,Event-Driven Microservices,software_development,high,2020-12-02,2021-09-02,success,2020-11-27,2020-11-30
+297,Multi-cloud Load Balancer,infrastructure_improvements,medium,2021-01-07,2021-10-07,delayed,2021-01-02,2021-01-05
+298,Blockchain Digital Identity,blockchain_project,medium,2021-02-12,2021-11-12,partial,2021-02-07,2021-02-10
+299,Edge Computing Platform,iot_implementation,high,2021-03-19,2022-02-19,success,2021-03-14,2021-03-17
+300,Serverless Microservices,software_development,medium,2021-04-24,2022-01-24,failed,2021-04-19,2021-04-22
+301,Cloud Migration Phase 3,infrastructure_improvements,high,2022-01-10,2022-12-15,success,2022-01-05,2022-01-07
+302,HR Analytics Dashboard,data_analytics,medium,2022-02-01,2022-10-31,success,2022-01-25,2022-01-28
+303,Payment System Upgrade,software_development,high,2022-03-15,2023-02-28,delayed,2022-03-10,2022-03-12
+304,Customer Portal v4,software_development,medium,2022-04-01,2022-12-15,success,2022-03-25,2022-03-28
+305,Network Security Enhancement,security_compliance,high,2022-05-10,2023-01-31,success,2022-05-05,2022-05-08
+306,Mobile App Performance Optimization,software_development,medium,2022-06-01,2022-11-30,success,2022-05-25,2022-05-28
+307,Data Warehouse Expansion,data_analytics,high,2022-07-15,2023-06-30,ongoing,2022-07-10,2022-07-12
+308,Employee Training Platform,software_development,medium,2022-08-01,2023-03-31,success,2022-07-25,2022-07-28
+309,Compliance Monitoring System,security_compliance,low,2022-09-10,2023-02-28,success,2022-09-05,2022-09-08
+310,Multi-cloud Strategy Implementation,infrastructure_improvements,high,2022-10-01,2023-08-31,delayed,2022-09-25,2022-09-28
+311,Inventory Management v3,software_development,high,2022-11-15,2023-09-30,ongoing,2022-11-10,2022-11-12
+312,Microservices Refactoring,software_development,high,2022-12-01,2023-10-15,ongoing,2022-11-25,2022-11-28
+313,IOT Device Integration,iot_implementation,medium,2023-01-10,2023-11-30,ongoing,2023-01-05,2023-01-07
+314,Chatbot Enhancement,ai_ml_project,low,2023-02-01,2023-06-30,success,2023-01-25,2023-01-28
+315,5G Infrastructure Upgrade,infrastructure_improvements,high,2023-03-15,2024-02-28,ongoing,2023-03-10,2023-03-12
+316,Automated Reporting System,data_analytics,medium,2023-04-01,2023-12-31,ongoing,2023-03-25,2023-03-28
+317,Machine Learning Platform,ai_ml_project,high,2023-05-10,2024-07-31,ongoing,2023-05-05,2023-05-08
+318,E-commerce Platform v2,software_development,medium,2023-06-01,2024-01-15,ongoing,2023-05-25,2023-05-28
+319,Office Automation System,software_development,medium,2023-07-15,2023-12-31,ongoing,2023-07-10,2023-07-12
+320,Predictive Maintenance System,ai_ml_project,high,2023-08-01,2024-04-30,ongoing,2023-07-25,2023-07-28
+321,Data Privacy Compliance,security_compliance,medium,2022-01-20,2022-09-30,success,2022-01-15,2022-01-18
+322,Container Platform Upgrade,infrastructure_improvements,high,2022-02-15,2023-01-15,success,2022-02-10,2022-02-12
+323,Augmented Reality Catalog,software_development,medium,2022-03-20,2023-02-28,success,2022-03-15,2022-03-18
+324,Green IT Initiative,infrastructure_improvements,high,2022-04-15,2023-04-30,success,2022-04-10,2022-04-12
+325,Unified Communications,software_development,medium,2022-05-20,2023-02-28,success,2022-05-15,2022-05-18
+326,Fraud Detection System,ai_ml_project,high,2022-06-15,2023-05-31,success,2022-06-10,2022-06-12
+327,Digital Onboarding System,software_development,low,2022-07-20,2023-01-31,success,2022-07-15,2022-07-18
+328,Branch Network Upgrade,infrastructure_improvements,medium,2022-08-15,2023-03-31,success,2022-08-10,2022-08-12
+329,Process Automation System,software_development,high,2022-09-10,2023-06-30,success,2022-09-05,2022-09-08
+330,Customer Data Platform,data_analytics,medium,2022-10-05,2023-04-20,success,2022-09-30,2022-10-02
+331,Smart Factory System,iot_implementation,high,2022-11-20,2023-10-15,ongoing,2022-11-15,2022-11-18
+332,Biometric Access System,security_compliance,medium,2022-12-10,2023-07-31,success,2022-12-05,2022-12-08
+333,E-commerce Upgrade,software_development,high,2023-01-25,2023-11-30,ongoing,2023-01-20,2023-01-22
+334,Disaster Recovery System,infrastructure_improvements,high,2023-02-15,2023-12-31,ongoing,2023-02-10,2023-02-12
+335,Digital Signage System,software_development,low,2023-03-20,2023-09-15,ongoing,2023-03-15,2023-03-18
+336,API Gateway Upgrade,software_development,medium,2023-04-10,2024-01-20,ongoing,2023-04-05,2023-04-08
+337,Supply Chain Optimization,ai_ml_project,high,2023-05-05,2024-03-31,ongoing,2023-04-30,2023-05-02
+338,Energy Monitoring System,iot_implementation,medium,2023-06-15,2024-01-31,ongoing,2023-06-10,2023-06-12
+339,Mobile Payment System,software_development,high,2023-07-20,2024-02-15,ongoing,2023-07-15,2023-07-18
+340,Workplace Analytics,data_analytics,low,2023-08-10,2024-02-28,ongoing,2023-08-05,2023-08-08
+341,Security Training Platform,security_compliance,medium,2022-02-28,2022-11-30,success,2022-02-23,2022-02-25
+342,Low-code Platform,software_development,high,2022-03-25,2023-02-15,success,2022-03-20,2022-03-22
+343,Digital Asset System,software_development,medium,2022-04-30,2023-01-20,success,2022-04-25,2022-04-28
+344,Smart Building System,iot_implementation,high,2022-05-25,2023-05-31,success,2022-05-20,2022-05-22
+345,Video Analytics System,ai_ml_project,medium,2022-06-30,2023-03-31,success,2022-06-25,2022-06-28
+346,Digital Identity System,blockchain_project,high,2022-07-25,2023-09-30,ongoing,2022-07-20,2022-07-22
+347,Automated Testing System,software_development,low,2022-08-20,2023-02-28,success,2022-08-15,2022-08-18
+348,Data Lake Upgrade,data_analytics,high,2022-09-15,2023-08-31,ongoing,2022-09-10,2022-09-12
+349,Urban Planning System,software_development,high,2022-10-30,2024-02-29,ongoing,2022-10-25,2022-10-28
+350,VR Training System,software_development,medium,2022-11-25,2023-07-31,success,2022-11-20,2022-11-22
+351,Edge Computing System,infrastructure_improvements,high,2022-12-20,2023-10-15,ongoing,2022-12-15,2022-12-18
+352,Regulatory Reporting,data_analytics,medium,2023-01-30,2023-09-30,ongoing,2023-01-25,2023-01-28
+353,Customer Journey Mapping,software_development,low,2023-02-25,2023-08-15,ongoing,2023-02-20,2023-02-22
+354,Quantum Cryptography,security_compliance,high,2023-03-30,2024-07-31,ongoing,2023-03-25,2023-03-28
+355,Environmental Monitoring,iot_implementation,medium,2023-04-25,2023-12-31,ongoing,2023-04-20,2023-04-22
+356,Document Processing AI,ai_ml_project,medium,2023-05-20,2024-01-15,ongoing,2023-05-15,2023-05-18
+357,Smart Grid System,iot_implementation,high,2023-06-25,2024-04-30,ongoing,2023-06-20,2023-06-22
+358,Loyalty Program Platform,software_development,medium,2023-07-30,2024-02-28,ongoing,2023-07-25,2023-07-28
+359,AR Maintenance System,software_development,low,2023-08-25,2024-02-15,ongoing,2023-08-20,2023-08-22
+360,Smart Contracts Platform,blockchain_project,high,2023-09-20,2024-09-30,ongoing,2023-09-15,2023-09-18
+361,Recruitment System AI,ai_ml_project,medium,2022-03-10,2022-12-31,success,2022-03-05,2022-03-08
+362,Multi-factor Auth System,security_compliance,medium,2022-04-05,2023-01-15,success,2022-03-31,2022-04-02
+363,Invoice Processing,software_development,low,2022-05-15,2022-11-30,success,2022-05-10,2022-05-12
+364,Cloud Cost Management,infrastructure_improvements,medium,2022-06-20,2023-03-31,success,2022-06-15,2022-06-18
+365,Predictive Inventory AI,ai_ml_project,high,2022-07-25,2023-06-30,success,2022-07-20,2022-07-22
+366,Supply Chain Digital Twin,software_development,high,2022-08-30,2023-11-30,ongoing,2022-08-25,2022-08-28
+367,Workforce Management,software_development,medium,2022-09-25,2023-05-31,success,2022-09-20,2022-09-22
+368,Content Moderation AI,ai_ml_project,medium,2022-10-30,2023-07-31,success,2022-10-25,2022-10-28
+369,Carbon Credits System,blockchain_project,high,2022-11-25,2024-01-31,ongoing,2022-11-20,2022-11-22
+370,Health Monitoring System,iot_implementation,medium,2022-12-20,2023-09-30,ongoing,2022-12-15,2022-12-18
+371,Smart Contract Audit,blockchain_project,low,2023-01-25,2023-08-15,ongoing,2023-01-20,2023-01-22
+372,Edge IoT Platform,iot_implementation,high,2023-02-20,2023-12-31,ongoing,2023-02-15,2023-02-18
+373,Digital Trading Platform,software_development,high,2023-03-25,2024-02-29,ongoing,2023-03-20,2023-03-22
+374,Market Research AI,ai_ml_project,medium,2023-04-20,2023-11-30,ongoing,2023-04-15,2023-04-18
+375,Customer Segmentation,data_analytics,low,2023-05-25,2023-10-31,ongoing,2023-05-20,2023-05-22
+376,Quantum ML Research,research_development,high,2023-06-20,2024-10-31,ongoing,2023-06-15,2023-06-18
+377,Employee Experience Platform,software_development,medium,2023-07-25,2024-02-29,ongoing,2023-07-20,2023-07-22
+378,Document Verification,blockchain_project,medium,2023-08-20,2024-03-31,ongoing,2023-08-15,2023-08-18
+379,AI Code Review,ai_ml_project,low,2023-09-15,2024-02-15,ongoing,2023-09-10,2023-09-12
+380,Energy Management System,iot_implementation,high,2023-10-10,2024-07-31,ongoing,2023-10-05,2023-10-08
+381,Multi-cloud Security,security_compliance,high,2022-04-15,2023-02-28,success,2022-04-10,2022-04-12
+382,Digital Onboarding v2,software_development,medium,2022-05-20,2023-01-15,success,2022-05-15,2022-05-18
+383,Supply Chain AI,ai_ml_project,high,2022-06-25,2023-05-31,success,2022-06-20,2022-06-22
+384,Blockchain Payment,blockchain_project,high,2022-07-30,2023-09-30,ongoing,2022-07-25,2022-07-28
+385,Employee Feedback System,software_development,low,2022-08-25,2023-02-28,success,2022-08-20,2022-08-22
+386,Data Governance Platform,data_analytics,medium,2022-09-20,2023-06-30,success,2022-09-15,2022-09-18
+387,Cloud Monitoring System,infrastructure_improvements,high,2022-10-25,2023-08-31,ongoing,2022-10-20,2022-10-22
+388,AI Content Generation,ai_ml_project,medium,2022-11-20,2023-07-31,success,2022-11-15,2022-11-18
+389,Digital Identity v2,blockchain_project,high,2022-12-15,2023-10-31,ongoing,2022-12-10,2022-12-12
+390,IOT Security System,security_compliance,medium,2023-01-10,2023-09-30,ongoing,2023-01-05,2023-01-07
+391,Mobile Banking v3,software_development,high,2023-02-05,2023-12-31,ongoing,2023-01-31,2023-02-02
+392,Data Quality System,data_analytics,medium,2023-03-10,2023-11-30,ongoing,2023-03-05,2023-03-08
+393,Process Mining Platform,ai_ml_project,high,2023-04-05,2024-02-29,ongoing,2023-03-31,2023-04-02
+394,Cloud Native Migration,infrastructure_improvements,high,2023-05-01,2024-03-31,ongoing,2023-04-26,2023-04-28
+395,Customer Service AI,ai_ml_project,medium,2023-05-25,2024-01-31,ongoing,2023-05-20,2023-05-22
+396,Blockchain Supply Chain,blockchain_project,high,2023-06-20,2024-08-31,ongoing,2023-06-15,2023-06-18
+397,IOT Analytics Platform,iot_implementation,medium,2023-07-15,2024-03-31,ongoing,2023-07-10,2023-07-12
+398,Digital Transformation,software_development,high,2023-08-10,2024-06-30,ongoing,2023-08-05,2023-08-08
+399,Security Operations Center,security_compliance,high,2023-09-05,2024-05-31,ongoing,2023-08-31,2023-09-02
+400,AI Research Platform,research_development,high,2023-09-30,2024-12-31,ongoing,2023-09-25,2023-09-28
+401,Generative AI Content Creation Platform,ai_ml_project,high,2024-01-15,2025-03-15,success,2024-01-10,2024-01-12
+402,Quantum-Safe Cryptography Implementation,security_compliance,high,2024-02-01,2025-01-01,delayed,2024-01-25,2024-01-28
+403,Metaverse Virtual Office Platform,software_development,high,2024-03-10,2025-02-10,partial,2024-03-05,2024-03-08
+404,Autonomous Supply Chain Management,ai_ml_project,high,2024-04-01,2025-06-01,success,2024-03-25,2024-03-28
+405,6G Network Research & Development,research_development,high,2024-05-15,2026-05-15,success,2024-05-10,2024-05-12
+406,Digital Twin Enterprise Platform,software_development,medium,2024-06-01,2025-04-01,failed,2024-05-25,2024-05-28
+407,Sustainable AI Computing,infrastructure_improvements,medium,2024-07-10,2025-02-10,delayed,2024-07-05,2024-07-08
+408,Neuro-Symbolic AI Integration,ai_ml_project,high,2024-08-01,2025-12-01,success,2024-07-25,2024-07-28
+409,Post-Quantum Blockchain,blockchain_project,high,2024-09-15,2025-05-15,success,2024-09-10,2024-09-12
+410,Web3 Enterprise Platform,software_development,high,2024-10-01,2025-10-01,cancelled,2024-09-25,2024-09-28
+411,AI-Powered Cybersecurity Defense,ai_ml_project,high,2024-11-10,2025-08-10,success,2024-11-05,2024-11-08
+412,Edge AI Computing Network,iot_implementation,medium,2024-12-01,2025-08-01,delayed,2024-11-25,2024-11-28
+413,Bio-Digital Interface Platform,software_development,high,2025-01-15,2026-01-15,success,2025-01-10,2025-01-12
+414,Autonomous Database Management,ai_ml_project,high,2025-02-01,2026-02-01,partial,2025-01-25,2025-01-28
+415,Quantum Machine Learning,research_development,high,2025-03-10,2026-09-10,success,2025-03-05,2025-03-08
+416,Extended Reality Training System,software_development,medium,2025-04-01,2026-01-01,failed,2025-03-25,2025-03-28
+417,Green Data Center Transformation,infrastructure_improvements,high,2025-05-15,2026-03-15,delayed,2025-05-10,2025-05-12
+418,Explainable AI Platform,ai_ml_project,medium,2025-06-01,2026-02-01,success,2025-05-25,2025-05-28
+419,Decentralized Autonomous Organization,blockchain_project,high,2025-07-10,2026-05-10,success,2025-07-05,2025-07-08
+420,Sovereign Cloud Infrastructure,infrastructure_improvements,medium,2025-08-01,2026-04-01,cancelled,2025-07-25,2025-07-28
+421,Federated Learning Enterprise Platform,ai_ml_project,high,2025-09-15,2026-06-15,success,2025-09-10,2025-09-12
+422,AI Governance & Compliance,security_compliance,medium,2025-10-01,2026-06-01,delayed,2025-09-25,2025-09-28
+423,Smart City IoT Integration,iot_implementation,medium,2025-11-10,2026-07-10,success,2025-11-05,2025-11-08
+424,Data Fabric Implementation,data_analytics,high,2025-12-01,2026-09-01,partial,2025-11-25,2025-11-28
+425,AI-Powered Software Development,ai_ml_project,medium,2024-01-20,2024-10-20,success,2024-01-15,2024-01-18
+426,Hybrid Quantum-Classical Computing,infrastructure_improvements,medium,2024-02-15,2024-11-15,delayed,2024-02-10,2024-02-12
+427,Digital Currency Platform,blockchain_project,high,2024-03-20,2025-01-20,success,2024-03-15,2024-03-18
+428,Autonomous Testing Framework,software_development,high,2024-04-25,2025-01-25,partial,2024-04-20,2024-04-23
+429,AI-Powered Drug Discovery,ai_ml_project,high,2024-05-30,2025-02-28,success,2024-05-25,2024-05-28
+430,Wearable Health Monitoring,iot_implementation,medium,2024-07-05,2025-04-05,failed,2024-06-30,2024-07-03
+431,Microservices 2.0 Architecture,software_development,medium,2024-08-10,2025-05-10,delayed,2024-08-05,2024-08-08
+432,Real-time Market Intelligence,data_analytics,medium,2024-09-15,2025-06-15,success,2024-09-10,2024-09-12
+433,Quantum-Resistant Cryptography,security_compliance,high,2024-10-20,2025-07-20,success,2024-10-15,2024-10-18
+434,Augmented Reality Commerce,software_development,medium,2024-11-25,2025-08-25,cancelled,2024-11-20,2024-11-23
+435,AI-Powered Legal Research,ai_ml_project,medium,2024-12-30,2025-09-30,success,2024-12-25,2024-12-28
+436,Multi-Cloud AI Platform,infrastructure_improvements,high,2025-01-05,2025-10-05,delayed,2025-01-01,2025-01-04
+437,Tokenized Asset Platform,blockchain_project,high,2025-02-10,2026-01-10,partial,2025-02-05,2025-02-08
+438,Edge AI for Agriculture,ai_ml_project,medium,2025-03-15,2025-12-15,success,2025-03-10,2025-03-12
+439,Autonomous Vehicle Integration,iot_implementation,medium,2025-04-20,2026-01-20,failed,2025-04-15,2025-04-18
+440,Serverless AI Pipeline,software_development,medium,2025-05-25,2026-02-25,delayed,2025-05-20,2025-05-23
+441,Real-time Climate Analytics,data_analytics,high,2025-06-30,2026-03-30,success,2025-06-25,2025-06-28
+442,Zero Trust AI Systems,security_compliance,medium,2025-08-05,2026-04-05,success,2025-07-31,2025-08-03
+443,Generative AI for Design,ai_ml_project,medium,2025-09-10,2026-05-10,cancelled,2025-09-05,2025-09-08
+444,Blockchain Supply Chain 2.0,blockchain_project,high,2025-10-15,2026-07-15,success,2025-10-10,2025-10-12
+445,Smart Grid IoT Platform,iot_implementation,medium,2025-11-20,2026-08-20,partial,2025-11-15,2025-11-18
+446,No-Code AI Platform,software_development,medium,2025-12-25,2026-09-25,success,2025-12-20,2025-12-23
+447,AI Ethics Monitoring,data_governance,high,2024-01-25,2024-10-25,success,2024-01-20,2024-01-23
+448,Quantum Computing Cloud,infrastructure_improvements,medium,2024-02-28,2024-11-28,delayed,2024-02-23,2024-02-26
+449,AI-Powered Investment Platform,ai_ml_project,medium,2024-04-05,2025-01-05,success,2024-03-31,2024-04-03
+450,Decentralized Identity System,blockchain_project,high,2024-05-10,2025-02-10,partial,2024-05-05,2024-05-08
+451,Industrial IoT 4.0,iot_implementation,high,2024-06-15,2025-03-15,failed,2024-06-10,2024-06-13
+452,Composable Enterprise Architecture,software_development,medium,2024-07-20,2025-04-20,delayed,2024-07-15,2024-07-18
+453,Predictive AI Maintenance,data_analytics,medium,2024-08-25,2025-05-25,success,2024-08-20,2024-08-23
+454,AI Security Framework,security_compliance,high,2024-09-30,2025-06-30,success,2024-09-25,2024-09-28
+455,Personalized AI Assistant,ai_ml_project,medium,2024-11-05,2025-08-05,cancelled,2024-10-31,2024-11-03
+456,Multi-Modal AI Platform,software_development,high,2024-12-10,2025-09-10,success,2024-12-05,2024-12-08
+457,Edge Computing Network,infrastructure_improvements,medium,2025-01-15,2025-10-15,delayed,2025-01-10,2025-01-13
+458,Blockchain Interoperability,blockchain_project,medium,2025-02-20,2025-11-20,partial,2025-02-15,2025-02-18
+459,AI-Powered Robotics,iot_implementation,high,2025-03-25,2026-02-25,success,2025-03-20,2025-03-23
+460,Autonomous DevOps Platform,software_development,medium,2025-04-30,2026-01-30,failed,2025-04-25,2025-04-28
+461,Data Intelligence Platform,data_analytics,medium,2025-06-05,2026-03-05,delayed,2025-05-31,2025-06-03
+462,Quantum Security Protocol,security_compliance,medium,2025-07-10,2026-04-10,success,2025-07-05,2025-07-08
+463,Conversational AI Platform,ai_ml_project,medium,2025-08-15,2026-05-15,success,2025-08-10,2025-08-12
+464,Blockchain Governance System,blockchain_project,medium,2025-09-20,2026-06-20,cancelled,2025-09-15,2025-09-18
+465,Smart Building IoT,iot_implementation,medium,2025-10-25,2026-07-25,partial,2025-10-20,2025-10-23
+466,AI-Driven Development,software_development,medium,2025-11-30,2026-08-30,success,2025-11-25,2025-11-28
+467,Responsible AI Framework,data_governance,high,2024-02-05,2024-11-05,success,2024-01-31,2024-02-03
+468,Neuromorphic Computing Research,infrastructure_improvements,medium,2024-03-12,2024-12-12,delayed,2024-03-07,2024-03-10
+469,AI-Powered Healthcare,ai_ml_project,medium,2024-04-18,2025-01-18,success,2024-04-13,2024-04-16
+470,Green Blockchain Initiative,blockchain_project,high,2024-05-23,2025-02-23,partial,2024-05-18,2024-05-21
+471,Environmental IoT Monitoring,iot_implementation,medium,2024-06-28,2025-03-28,failed,2024-06-23,2024-06-26
+472,Digital Experience Platform,software_development,medium,2024-08-03,2025-05-03,delayed,2024-07-29,2024-08-01
+473,Real-time Economic Analytics,data_analytics,medium,2024-09-08,2025-06-08,success,2024-09-03,2024-09-06
+474,AI Threat Intelligence,security_compliance,high,2024-10-13,2025-07-13,success,2024-10-08,2024-10-11
+475,Automated Machine Learning,ai_ml_project,medium,2024-11-18,2025-08-18,cancelled,2024-11-13,2024-11-16
+476,Cloud-Native AI Platform,software_development,high,2024-12-23,2025-09-23,success,2024-12-18,2024-12-21
+477,Heterogeneous Computing,infrastructure_improvements,medium,2025-01-28,2025-10-28,delayed,2025-01-23,2025-01-26
+478,Blockchain Data Integrity,blockchain_project,medium,2025-03-05,2025-12-05,partial,2025-02-28,2025-03-03
+479,AI-Powered Manufacturing,iot_implementation,high,2025-04-10,2026-03-10,success,2025-04-05,2025-04-08
+480,Federated Analytics Platform,software_development,medium,2025-05-15,2026-02-15,failed,2025-05-10,2025-05-13
+481,Privacy-Preserving AI,data_analytics,medium,2025-06-20,2026-03-20,delayed,2025-06-15,2025-06-18
+482,AI Compliance Automation,security_compliance,medium,2025-07-25,2026-04-25,success,2025-07-20,2025-07-23
+483,Multimodal AI Integration,ai_ml_project,medium,2025-08-30,2026-05-30,success,2025-08-25,2025-08-28
+484,Blockchain for Climate,blockchain_project,high,2025-10-05,2026-07-05,cancelled,2025-09-30,2025-10-03
+485,Smart Transportation IoT,iot_implementation,medium,2025-11-10,2026-08-10,partial,2025-11-05,2025-11-08
+486,AI-Augmented Development,software_development,medium,2025-12-15,2026-09-15,success,2025-12-10,2025-12-13
+487,AI Risk Management,data_governance,high,2024-02-15,2024-11-15,success,2024-02-10,2024-02-13
+488,Quantum Networking,infrastructure_improvements,medium,2024-03-22,2024-12-22,delayed,2024-03-17,2024-03-20
+489,AI-Powered Education,ai_ml_project,medium,2024-04-27,2025-01-27,success,2024-04-22,2024-04-25
+490,Blockchain for Healthcare,blockchain_project,high,2024-06-02,2025-03-02,partial,2024-05-28,2024-05-31
+491,Agricultural IoT 2.0,iot_implementation,medium,2024-07-07,2025-04-07,failed,2024-07-02,2024-07-05
+492,Autonomous Business Platform,software_development,medium,2024-08-12,2025-05-12,delayed,2024-08-07,2024-08-10
+493,Predictive Business Intelligence,data_analytics,medium,2024-09-17,2025-06-17,success,2024-09-12,2024-09-15
+494,AI Security Assessment,security_compliance,high,2024-10-22,2025-07-22,success,2024-10-17,2024-10-20
+495,Generative AI for Media,ai_ml_project,medium,2024-11-27,2025-08-27,cancelled,2024-11-22,2024-11-25
+496,Event-Driven AI Platform,software_development,high,2024-12-02,2025-09-02,success,2024-11-27,2024-11-30
+497,Multi-Cloud AI Orchestration,infrastructure_improvements,medium,2025-01-07,2025-10-07,delayed,2025-01-02,2025-01-05
+498,Blockchain Digital Economy,blockchain_project,medium,2025-02-12,2025-11-12,partial,2025-02-07,2025-02-10
+499,Edge AI Computing,iot_implementation,high,2025-03-19,2026-02-19,success,2025-03-14,2025-03-17
+500,Autonomous Cloud Management,software_development,medium,2025-04-24,2026-01-24,failed,2025-04-19,2025-04-22

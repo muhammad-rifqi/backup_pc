@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Application Deployment Diagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        .layer {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            position: relative;
+        }
+        .internet {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            border-color: #4caf50;
+        }
+        .datacenter {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            border-color: #e91e63;
+        }
+        .layer-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .nodes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .node {
+            background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+            border: 2px solid #0277bd;
+            border-radius: 8px;
+            padding: 15px;
+            min-width: 250px;
+            max-width: 350px;
+            flex: 1;
+        }
+        .node-title {
+            font-weight: bold;
+            color: #0277bd;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .stereotype {
+            color: #666;
+            font-size: 11px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .artifact {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border: 1px solid #f57c00;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 8px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #e65100;
+        }
+        .component {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border: 1px solid #7b1fa2;
+            border-radius: 5px;
+            padding: 8px;
+            margin: 8px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #4a148c;
+        }
+        .connections {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+        .connection-title {
+            font-weight: bold;
+            color: #2196f3;
+            margin-bottom: 10px;
+        }
+        .connection-item {
+            margin: 5px 0;
+            padding: 5px 10px;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid #2196f3;
+            font-size: 13px;
+        }
+        .protocol {
+            color: #1976d2;
+            font-weight: bold;
+        }
+        .deploy {
+            color: #9c27b0;
+            font-style: italic;
+        }
+        .legend {
+            margin-top: 30px;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legend-box {
+            width: 20px;
+            height: 15px;
+            border-radius: 3px;
+        }
+        .legend-node { background: linear-gradient(135deg, #e1f5fe, #b3e5fc); border: 1px solid #0277bd; }
+        .legend-artifact { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border: 1px solid #f57c00; }
+        .legend-component { background: linear-gradient(135deg, #f3e5f5, #e1bee7); border: 1px solid #7b1fa2; }
+        
+        @media (max-width: 768px) {
+            .nodes {
+                flex-direction: column;
+            }
+            .node {
+                max-width: 100%;
+            }
+            .legend-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">ML Application Deployment Diagram</h1>
+        
+        <!-- Internet Layer -->
+        <div class="layer internet">
+            <div class="layer-title">🌐 Internet</div>
+            <div class="nodes">
+                <div class="node">
+                    <div class="node-title">📱 User Mobile Device</div>
+                    <div class="stereotype">&lt;&lt;mobile&gt;&gt;</div>
+                    <div class="artifact">Mobile App (iOS/Android)</div>
+                    <div class="component">MobileUI</div>
+                </div>
+                <div class="node">
+                    <div class="node-title">💻 User Desktop PC</div>
+                    <div class="stereotype">&lt;&lt;desktop&gt;&gt;</div>
+                    <div class="artifact">Web Browser</div>
+                    <div class="component">WebUI</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Center Layer -->
+        <div class="layer datacenter">
+            <div class="layer-title">🏢 Data Center</div>
+            <div class="nodes">
+                <div class="node">
+                    <div class="node-title">🌐 Web Server (Apache/HTTPD)</div>
+                    <div class="stereotype">&lt;&lt;Web Server&gt;&gt;</div>
+                    <div class="artifact">Apache Configuration</div>
+                    <div class="component">Frontend Service</div>
+                </div>
+                <div class="node">
+                    <div class="node-title">⚙️ Application Server</div>
+                    <div class="stereotype">&lt;&lt;Application Server&gt;&gt;</div>
+                    <div class="artifact">ML Backend API (JAR/WAR)</div>
+                    <div class="component">ML Backend Service</div>
+                </div>
+                <div class="node">
+                    <div class="node-title">🗄️ ML Database Server</div>
+                    <div class="stereotype">&lt;&lt;Database Server&gt;&gt;</div>
+                    <div class="artifact">ML Database Schema</div>
+                    <div class="component">ML Database</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connections -->
+        <div class="connections">
+            <div class="connection-title">🔗 System Connections</div>
+            <div class="connection-item">
+                📱 Mobile Device ↔ 🌐 Internet → 🌐 Web Server 
+                <span class="protocol">[HTTP/HTTPS]</span>
+            </div>
+            <div class="connection-item">
+                💻 Desktop PC ↔ 🌐 Internet → 🌐 Web Server 
+                <span class="protocol">[HTTP/HTTPS]</span>
+            </div>
+            <div class="connection-item">
+                🌐 Web Server → ⚙️ Application Server 
+                <span class="protocol">[HTTP/HTTPS]</span>
+            </div>
+            <div class="connection-item">
+                ⚙️ Application Server → 🗄️ Database Server 
+                <span class="protocol">[ODBC]</span>
+            </div>
+            <div class="connection-item">
+                Frontend Service → ML Backend Service 
+                <span class="protocol">[Internal API]</span>
+            </div>
+            <div class="connection-item">
+                ML Backend Service → ML Database 
+                <span class="protocol">[Database Connection]</span>
+            </div>
+        </div>
+
+        <!-- Deployment Relationships -->
+        <div class="connections">
+            <div class="connection-title">📦 Deployment Relationships</div>
+            <div class="connection-item">
+                <span class="deploy">Frontend Service</span> deployed to → 🌐 Web Server
+            </div>
+            <div class="connection-item">
+                <span class="deploy">ML Backend Service</span> deployed to → ⚙️ Application Server
+            </div>
+            <div class="connection-item">
+                <span class="deploy">ML Database</span> deployed to → 🗄️ Database Server
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-title">📋 Legend</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-box legend-node"></div>
+                    <span>Node (Infrastructure)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box legend-artifact"></div>
+                    <span>Artifact (Deployable)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box legend-component"></div>
+                    <span>Component (Service)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

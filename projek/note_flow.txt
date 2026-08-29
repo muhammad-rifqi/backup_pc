@@ -1,0 +1,25 @@
+Gambar ini menggambarkan proses analisis teks dari tweet untuk mengidentifikasi ujaran kebencian (hate speech) menggunakan pendekatan pemrosesan bahasa alami dan pembelajaran mesin. Berikut adalah penjelasan singkatnya:
+
+Dataset Collection:
+Data dikumpulkan melalui tweet langsung atau menggunakan tweet crawler untuk mendapatkan dataset tweet.
+Data Preparation:
+Data mentah diproses melalui beberapa langkah:
+Cleaning & Case Folding: Membersihkan teks dan menyamakan huruf menjadi huruf kecil.
+Tokenizing: Memecah teks menjadi kata-kata atau token.
+Stopword Removal: Menghapus kata-kata umum yang tidak signifikan (misalnya "dan", "atau").
+Stemming: Mengurangi kata ke bentuk dasarnya.
+Labeling & TF-IDF:
+Data yang sudah diproses diberi label (misalnya ujaran kebencian atau tidak) dan diubah menjadi representasi numerik menggunakan TF-IDF (Term Frequency-Inverse Document Frequency).
+Modeling & Evaluate:
+Data yang telah dilabeli dibagi menjadi data pelatihan (train data) dan data pengujian (test data).
+Model hibrid digunakan untuk klasifikasi, yang kemudian mengidentifikasi ujaran kebencian.
+Proses validasi dan evaluasi dilakukan untuk mengukur kinerja model, termasuk pada data yang belum diberi label (unlabelled data).
+Proses ini secara keseluruhan bertujuan untuk membangun dan mengevaluasi model yang mampu mendeteksi ujaran kebencian dari tweet secara otomatis.
+
+
+
+
+
+
+
+How can Grok help?

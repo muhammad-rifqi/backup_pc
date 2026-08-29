@@ -1,0 +1,30 @@
+set CGO_ENABLED=1
+echo %CGO_ENABLED%
+1
+go run main.go
+https://sourceforge.net/projects/mingw/
+https://www.sqlite.org/download.html
+sqlite-tools-win-x64
+
+isi path sqlite3/bin
+isipath mingw/bin
+
+GET /dashboard/v1/payments
+GET /dashboard/v1/payments?status=failed
+POST /dashboard/v1/auth/login
+
+Harus tampil:
+
+Field
+Payment ID
+Merchant Name
+Date
+Amount
+Status
+
+Input email + password
+Call API login
+Simpan:
+JWT
+role
+Redirect ke dashboard

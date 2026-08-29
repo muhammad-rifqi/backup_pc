@@ -1,0 +1,989 @@
+tail -n 50 /var/log/apache2/error.log
+sudo nano /etc/postgresql/12/main/pg_hba.conf
+curl -I http://localhost/phppgadmin/all_db.php
+cd /var/www/html/
+cd phppgadmin/
+sudo sed -i 's/^var /public /g' *.php
+sudo systemctl restart postgresql
+sudo systemctl restart apache2
+clear
+cd ..
+ll
+sudo apt install adminer -y
+sudo a2enconf adminer
+sudo systemctl reload apache2
+nano test.php
+exit
+cd /root/
+ll
+cd /home/DijagaCreator2025/
+clear
+sudo useradd --no-create-home --shell /bin/false prometheus
+sudo mkdir /etc/prometheus
+sudo mkdir /var/lib/prometheus
+cd /tmp
+wget https://github.com/prometheus/prometheus/releases/download/v2.53.0/prometheus-2.53.0.linux-amd64.tar.gz
+tar xvf prometheus-2.53.0.linux-amd64.tar.gz
+cd prometheus-2.53.0.linux-amd64
+sudo cp prometheus promtool /usr/local/bin/
+sudo cp -r consoles/ console_libraries/ /etc/prometheus/
+sudo cp prometheus.yml /etc/prometheus/
+sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
+sudo nano /etc/systemd/system/prometheus.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now prometheus
+sudo systemctl status prometheus
+cd ..
+cd /home/DijagaCreator2025/
+cd /tmp/
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo apt update
+sudo apt install -y grafana
+sudo systemctl enable --now grafana-server
+sudo systemctl status grafana-server
+exit
+python --version
+python3 --version
+ifconfig
+sudo apt update
+sudo apt update
+clear
+sudo apt install apache2 -y
+systemctl status apache2
+sudo systemctl enable apache2
+clear
+ifconfig
+sudo apt install net-tools
+ifconfig
+sudo ufw status
+sudo apt install git
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt jammy-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt update
+clear
+sudo apt install postgresql-12 postgresql-client-12 -y
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+psql --version
+sudo -u postgres psql
+sudo apt install php php-cli php-fpm php-pgsql php-mbstring php-xml php-gd -y
+cd /var/www/html
+sudo git clone https://github.com/phppgadmin/phppgadmin.git
+cd phppgadmin
+ll
+clear
+sudo chown -R www-data:www-data /var/www/html/phppgadmin
+sudo chmod -R 755 /var/www/html/phppgadmin
+sudo nano /var/www/html/phppgadmin/conf/config.inc.php
+cp /var/www/html/phppgadmin/conf/config.inc.php-dist /var/www/html/phppgadmin/conf/config.inc.php
+sudo nano /var/www/html/phppgadmin/conf/config.inc.php
+sudo nano /etc/postgresql/12/main/pg_hba.conf
+sudo systemctl restart postgresql
+cd /etc/apache2/sites-available/
+ll
+nano phppgadmin.conf
+sudo a2ensite phppgadmin
+sudo systemctl reload apache2
+ifconfig
+sudo nano /var/www/html/phppgadmin/conf/config.inc.php
+sudo nano /etc/postgresql/12/main/pg_hba.conf
+sudo nano /etc/postgresql/12/main/postgresql.conf
+sudo systemctl restart postgresql
+psql -h localhost -U postgres
+php -m | grep pgsql
+sudo ss -tulpn | grep 5432
+cd /var/www/html/phppgadmin/
+cd /var/www/html/phppgadmin/classes
+nano Misc.php
+clear
+cd /var/www/html/
+ll
+mkdir dijagaonline
+chomd 755 dijagaonline
+chmod 755 dijagaonline
+cd dijagaonline/
+history 500
+clear
+history 1000
+clear
+cd ..
+rm -rf dijagaonline
+git clone https://github.com/Setya78/API-DIJAGAONLINE_Product.git
+cd API-DIJAGAONLINE_Product/
+ll
+sudo apt install python3.10-venv -y
+sudo needrestart
+sudo needrestart -r a
+sudo apt install python3.10-venv -y
+python --version
+python3 --version
+python --version
+python3 --version
+ls
+ll
+python3.10 -m venv dijagaonline-env
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+ll
+nano db.py
+nano .env
+uvicorn main:app --host 0.0.0.0 --port 8000
+source dijagaonline-env/bin/deactivate
+deactivate
+history 50
+exit
+cd /var/www/html/
+cd API-DIJAGAONLINE_Product/
+ll
+git status
+git add .
+git commit -m "udpate dari server";
+git push
+cd /etc/systemd/system/
+ls -lha
+cd /var/www/html/
+cd API-DIJAGAONLINE_Product/
+sudo nano /etc/systemd/system/dijagaonline.service
+clear
+sudo nano /etc/systemd/system/dijagaonline.service
+sudo systemctl daemon-reload
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo nano /etc/systemd/system/dijagaonline.servicea
+sudo systemctl enable dijagaonline
+history 25
+sudo systemctl status dijagaonline
+exit
+cd /var/www/html/
+ll
+mv /var/www/html/index.html /var/www/html/index_bak.html
+ll
+nano index.html
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+ll
+nano .gitignore
+git status
+git add .
+git commit -m "udpate";
+git push
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+nano main.py
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+git status
+git add .
+git commit -m "udpate";
+git push
+exit
+cd /var/www/html/
+git clone https://github.com/Setya78/Frontend-DIJAGAONLINE_Product.git
+ll
+rm -rf index.html
+mv /var/www/html/index_bak.html /var/www/html/index.html
+ll
+cd Frontend-DIJAGAONLINE_Product/
+git pull
+cd /etc/apache2/sites-available/
+nano 000-default.conf
+ll
+nano phppgadmin.conf
+nano 000-default.conf
+sudo systemctl restart apache2
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+cd /var/www/html/
+ll
+exit
+cd /var/www/html/
+cd API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+exit
+php -v
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+ll
+git pull
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+cd /etc/apache2/sites-available/
+nano 000-default.conf
+cd ..
+ll
+nano apache2.conf
+sudo systemctl restart apache2
+cd /home/DijagaCreator2025/
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+cd application/config/
+nano routes.php
+cd ..
+nano config/routes.php
+cd ..
+git status
+git add .
+git commit -m "update";
+git push
+php -v
+php -m | grep curl
+sudo apt install php8.1-curl
+sudo systemctl restart apache2
+php -m | grep curl
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+nano main.py
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+exit
+hitory | grep "200"
+history | grep "200"
+history 200
+clear
+cd /var/www/html/API-DIJAGAONLINE_Product/
+ll
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+nano main.py
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+sudo systemctl start dijagaonline
+nano main.py
+sudo systemctl stop dijagaonline
+sudo systemctl start dijagaonline
+nano main.py
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+uvicorn main:app --host 0.0.0.0 --port 8000
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+exit
+nano /etc/postgresql/12/main/postgresql.conf
+sudo systemctl restart postgresql
+nano /etc/postgresql/12/main/postgresql.conf
+sudo systemctl restart postgresql
+sudo systemctl status postgresql
+sudo -u postgres psql
+nano /etc/postgresql/12/main/postgresql.conf
+sudo systemctl status postgresql
+sudo systemctl restart postgresql
+history | grep "prameth"
+history | grep "prometh"
+clear
+cd /usr/local/bin
+sudo wget https://github.com/grafana/loki/releases/download/v2.9.3/loki-linux-amd64.zip
+sudo unzip loki-linux-amd64.zip
+sudo apt install unzip
+sudo apt install zip
+sudo unzip loki-linux-amd64.zip
+sudo mv loki-linux-amd64 loki
+sudo chmod +x loki
+sudo useradd --system loki
+sudo mkdir -p /etc/loki /var/lib/loki
+sudo chown -R loki:loki /etc/loki /var/lib/loki
+sudo nano /etc/loki/loki.yml
+sudo nano /etc/systemd/system/loki.service
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable --now loki
+curl http://localhost:3100/ready
+clear
+cd /usr/local/bin
+sudo wget https://github.com/grafana/loki/releases/download/v2.9.3/promtail-linux-amd64.zip
+sudo unzip promtail-linux-amd64.zip
+sudo mv promtail-linux-amd64 promtail
+sudo chmod +x promtail
+sudo useradd --system promtail
+sudo mkdir -p /etc/promtail /var/lib/promtail
+sudo chown -R promtail:promtail /etc/promtail /var/lib/promtail
+sudo nano /etc/promtail/promtail.yml
+sudo usermod -aG adm promtail
+sudo systemctl restart promtail
+sudo nano /etc/systemd/system/promtail.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now promtail
+sudo journalctl -u promtail -f
+sudo systemctl restart promtail
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+git status
+git add .
+git commit -m "update";
+git push
+sudo systemctl stop dijagaonline
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+exit
+cd /var/www/html/
+git clone https://github.com/Setya78/Backend-DIJAGAONLINE_Product.git
+cd Backend-DIJAGAONLINE_Product/
+git pull
+ll
+git pull
+ll
+cd ..
+sudo chown -R www-data:www-data /var/www/html/Backend-DIJAGAONLINE_Product
+sudo chmod -R 755 /var/www/html/Backend-DIJAGAONLINE_Product
+ll
+cd Backend-DIJAGAONLINE_Product/
+ll
+ls -lha
+sudo systemctl restart apache2
+sudo tail -f /var/log/apache2/error.log
+nano /etc/apache2/apache2.conf
+cd /etc/apache2/sites-available/
+nano 000-default.conf
+sudo systemctl restart apache2
+nano 000-default.conf
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+cd /var/www/html/
+ls -l /var/www/html/Backend-DIJAGAONLINE_Product
+cd Backend-DIJAGAONLINE_Product/
+git pull
+git config --global --add safe.directory /var/www/html/Backend-DIJAGAONLINE_Product
+git pull
+sudo a2enmod rewrite
+sudo systemctl restart apache2
+nano .htaccess
+git pull
+git status
+git pull
+git add .
+git commit -m "dadad"
+git pull
+git pull origin main
+cd ..
+rm -rf Backend-DIJAGAONLINE_Product/
+ll
+git clone https://github.com/Setya78/Backend-DIJAGAONLINE_Product.git
+cd Backend-DIJAGAONLINE_Product/
+ll
+git pull
+cd ..
+cd API-DIJAGAONLINE_Product/
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "update"
+git push
+sudo systemctl start dijagaonline
+cd ..
+cd Backend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+clear
+sudo systemctl stop dijagaonline
+git status
+git add .
+git commit -m "update"
+git push
+nano main.py
+git add .
+git commit -m "update"
+git push
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+sudo a2enmod headers
+sudo systemctl restart apache2
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+nano /etc/apache2/sites-available/000-default.conf
+sudo systemctl restart apache2
+exit
+clear
+exit
+clear
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update"
+git push
+sudo systemctl start dijagaonline
+git push
+sudo systemctl stop dijagaonline
+sudo systemctl start dijagaonline
+exit
+clear
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+ll
+git pull
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+clear
+sudo systemctl stop dijagaonline
+nano main.py
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+nano main.py
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+history | grep "source"
+source dijagaonline-env/bin/activate
+deactivate
+history | grep "uvi"
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano main.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano main.py
+uvicorn main:app --host 0.0.0.0 --port 8000
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+exit
+sudo systemctl stop dijagaonline
+cd /var/www/html/API-DIJAGAONLINE_Product/
+nano main.py
+sudo systemctl start dijagaonline
+nano main.py
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano main.py
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+exit
+clear
+history | grep "chmod";
+cd /var/www/html/
+cd API-DIJAGAONLINE_Product/
+ll
+mkdir schemas
+ll
+sudo chmod -R 755 schemas
+sudo chmod -R 755 schemas/
+clear
+cd schemas/
+nano __init__.py
+nano models.py
+cd ..
+nano main.py
+cd schemas/
+nano models.py
+cd ..
+nano main.py
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+clear
+sudo systemctl stop dijagaonline
+nano main.py
+nano schemas/models.py
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+nano main.py
+uvicorn main:app --host 0.0.0.0 --port 8000
+nano main.py
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+ll
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "udpate";
+git push
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+nano main.py
+nano schemas/models.py
+nano main.py
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update";
+git push
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+cd ..//
+cd API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano main.py
+sudo systemctl start dijagaonline
+git add .
+git commit -m "udpate"
+git push
+nano schemas/models.py
+sudo systemctl restart dijagaonline
+nano schemas/models.py
+nano main.py
+sudo systemctl restart dijagaonline
+nano main.py
+sudo systemctl restart dijagaonline
+nano main.py
+sudo systemctl restart dijagaonline
+git add .
+git commit -m "update"
+git push
+sudo systemctl restart dijagaonline
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+cd ..
+cd API-DIJAGAONLINE_Product/
+nano main.py
+sudo systemctl restart dijagaonline
+nano main.py
+sudo systemctl restart dijagaonline
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano main.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+git add .
+git commit -m "update";
+git push
+sudo systemctl restart dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+nano schemas/models.py
+sudo systemctl restart dijagaonline
+sudo systemctl start dijagaonline
+nano schemas/models.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+nano schemas/models.py
+uvicorn main:app --host 0.0.0.0 --port 8000
+nano main.py
+nano schemas/models.py
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+ll
+sudo systemctl stop dijagaonline
+nano main.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano schemas/models.py
+nano main.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano schemas/models.py
+cd /var/www/html
+l
+nano test.php
+exit
+cd /var/www/html/Backend-DIJAGAONLINE_Product/
+git pull
+exit
+nano /etc/apache2/apache2.conf
+nano /etc/apache2/sites-available/000-default.conf
+exit
+cd /var/www/html/Backend-DIJAGAONLINE_Product/
+git pull
+git pull
+exit
+cd /var/www/html/Backend-DIJAGAONLINE_Product/
+git pull
+exit
+sudo systemctl status cron
+crontab -l
+exit
+cd /var/www/html/
+nano monitor.php
+sudo systemctl status cron
+crontab -l
+crontab -e
+which php
+crontab -l
+php /var/www/html/monitor.php
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+nano main.py
+nano schemas/models.py
+nano main.py
+sudo systemctl start dijagaonline
+nano main.py
+sudo systemctl restart dijagaonline
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano schemas/models.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano main.py
+nano schemas/models.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+nano main.py
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl stop dijagaonline
+sudo systemctl start dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update"
+git push
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+history 500
+clear
+cat ~/.bash_history > riwayat_semua.txt
+ll
+git status
+git add .
+git commit -m "update";
+git push
+sudo systemctl stop dijagaonline
+git pull
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+git pull
+sudo systemctl restart dijagaonline
+sudo systemctl stop dijagaonline
+git add .
+git commit -m "update"
+git push
+git pull
+git pull --no-rebase origin main
+git status
+git pull
+sudo systemctl restart dijagaonline
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+git pull --no-rebase origin maingit config pull.rebase false
+git config pull.rebase false
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+cd /var/www/html/API-DIJAGAONLINE_Product/
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl stop dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl status dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl status dijagaonline
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+sudo systemctl status dijagaonline
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn main:app --host 0.0.0.0 --port 9000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn main:app --host 0.0.0.0 --port 9000
+deactivate
+sudo lsof -i :8000
+sudo systemctl stop dijagaonline
+sudo lsof -i :8000
+sudo systemctl stop dijagaonline
+sudo systemctl status dijagaonline
+sudo lsof -i :8000
+sudo kill -15 738625
+sudo lsof -i :8000
+sudo systemctl status dijagaonline
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl stop dijagaonline
+sudo lsof -i :8000
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+clear
+exit
+history | grep "cat"
+cd /var/www/html/API-DIJAGAONLINE_Product/
+cat ~/.bash_history > riwayat_semua.txt
+git status
+git add .
+git commit -m "udpate";
+git push
+git pull
+git push
+sudo systemctl stop dijagaonline
+sudo systemctl start dijagaonline
+sudo systemctl restart dijagaonline
+git pull
+sudo systemctl restart dijagaonline
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+sudo systemctl status dijagaonline
+git pull
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/Backend-DIJAGAONLINE_Product/
+ll
+git pul
+git pull
+exit
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+git pull
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+sudo systemctl stop dijagaonline
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+sudo lsof -i :8000
+sudo kill -15 1245626
+cd /var/www/html/API-DIJAGAONLINE_Product/
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+sudo systemctl start dijagaonline
+exit
+cd /var/www/html/API-DIJAGAONLINE_Product/
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+sudo lsof -i :8000
+sudo kill -15 1244976
+sudo lsof -i :8000
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+deactivate
+git pull
+source dijagaonline-env/bin/activate
+uvicorn main:app --host 0.0.0.0 --port 8000
+clear
+cd /var/www/html/Frontend-DIJAGAONLINE_Product/
+ll
+git pull
+exit
+clear
+cd /etc/systemd/system/
+ll
+ls -lha
+nano dijagaonline.service
+sudo ufw status
+exit
+sudo systemctl start dijagaonline
+sudo systemctl status dijagaonline
+sudo systemctl restart dijagaonline
+sudo lsof -i :8000
+cd /var/www/html/
+ll
+sudo systemctl restart dijagaonline
+exit

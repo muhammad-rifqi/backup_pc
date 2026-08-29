@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Deployment Diagram</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        .title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .diagram-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .node {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            min-width: 280px;
+            flex: 1;
+            position: relative;
+        }
+
+        .node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .node-client {
+            background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+            border: 3px solid #0277bd;
+        }
+
+        .node-server {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border: 3px solid #7b1fa2;
+        }
+
+        .node-database {
+            background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+            border: 3px solid #388e3c;
+        }
+
+        .node-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .node-icon {
+            font-size: 1.5em;
+        }
+
+        .component {
+            background: #fff3e0;
+            border: 2px solid #f57c00;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 8px 0;
+            text-align: center;
+            font-weight: 500;
+            color: #333;
+            transition: all 0.2s ease;
+        }
+
+        .component:hover {
+            background: #ffe0b2;
+            transform: scale(1.02);
+        }
+
+        .connection-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .connection {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.9);
+            padding: 15px 25px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .connection:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        .arrow {
+            font-size: 1.5em;
+            margin: 0 10px;
+            color: #666;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .legend {
+            background: rgba(255,255,255,0.95);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .legend h3 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            gap: 15px;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            border-radius: 5px;
+            border: 2px solid #333;
+        }
+
+        .client-color { background: linear-gradient(135deg, #e1f5fe, #b3e5fc); }
+        .server-color { background: linear-gradient(135deg, #f3e5f5, #e1bee7); }
+        .database-color { background: linear-gradient(135deg, #e8f5e8, #c8e6c9); }
+
+        @media (max-width: 768px) {
+            .diagram-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .node {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .connection-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🚀 Flow Deployment Diagram</h1>
+        
+        <div class="diagram-container">
+            <!-- Node 1: Client Devices -->
+            <div class="node node-client">
+                <div class="node-title">
+                    <span class="node-icon">🖥️</span>
+                    Node 1: Client Devices
+                </div>
+                <div class="component">User Interface</div>
+                <div class="component">Data Input</div>
+                <div class="component">Result Visualization</div>
+            </div>
+
+            <!-- Node 2: Application Server -->
+            <div class="node node-server">
+                <div class="node-title">
+                    <span class="node-icon">⚙️</span>
+                    Node 2: Application Server
+                </div>
+                <div class="component">ANN Model</div>
+                <div class="component">Naive Bayes Classifier</div>
+                <div class="component">Ensemble Learning</div>
+                <div class="component">Risk Analysis</div>
+                <div class="component">Continuous Learning</div>
+            </div>
+
+            <!-- Node 3: Database Server -->
+            <div class="node node-database">
+                <div class="node-title">
+                    <span class="node-icon">🗄️</span>
+                    Node 3: Database Server
+                </div>
+                <div class="component">Project Data</div>
+                <div class="component">Training Results</div>
+            </div>
+        </div>
+
+        <!-- Connections -->
+        <div class="connection-container">
+            <div class="connection">
+                Client Devices
+                <span class="arrow">⟷</span>
+                Application Server
+                <br><small>(API/Web Service)</small>
+            </div>
+        </div>
+
+        <div class="connection-container">
+            <div class="connection">
+                Application Server
+                <span class="arrow">⟷</span>
+                Database Server
+                <br><small>(Database Connection)</small>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <h3>📋 Legend</h3>
+            <div class="legend-item">
+                <div class="legend-color client-color"></div>
+                <span><strong>Client Devices:</strong> User interface dan visualisasi hasil</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color server-color"></div>
+                <span><strong>Application Server:</strong> Machine learning models dan analisis</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color database-color"></div>
+                <span><strong>Database Server:</strong> Penyimpanan data dan hasil pelatihan</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

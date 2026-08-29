@@ -1,0 +1,17 @@
+id,name,description,category_id,created_at
+1,Human Resource,Kekurangan tenaga ahli di tengah proyek.,1,2023-01-01
+2,Budget,Overbudget akibat kenaikan harga layanan cloud.,3,2023-01-01
+3,Timeline,Keterlambatan karena integrasi dengan sistem lama.,2,2023-01-01
+4,Technology,Pelanggaran hak cipta pada library open-source.,4,2023-01-01
+5,Data Breach,Keamanan data terancam karena celah sistem.,1,2023-01-01
+6,System Failure,Kerusakan infrastruktur server utama.,1,2023-01-01
+7,Regulatory Change,Perubahan regulasi yang memengaruhi proyek.,4,2023-01-01
+8,Market Demand,Permintaan pasar yang menurun selama proyek.,7,2023-01-01
+9,Compliance,Gagal memenuhi standar ISO atau GDPR.,6,2023-01-01
+10,Scope Creep,Pengeboran ruang lingkup proyek dari klien.,8,2023-01-01
+11,Device Compatibility,Fragmentasi perangkat yang sulit diuji.,1,2024-06-10
+12,Resource Allocation,Pemborosan sumber daya karena perencanaan buruk.,8,2023-01-01
+13,Third-Party Dependency,Ketergantungan pada vendor eksternal yang tidak stabil.,2,2023-01-01
+14,Technology Obsolescence,Teknologi yang digunakan menjadi usang sebelum deployment.,1,2023-01-01
+15,Stakeholder Resistance,Tolak dari pemangku kepentingan terhadap perubahan.,5,2023-01-01
+16,Environmental,Bencana alam mengganggu operasional tim.,9,2023-01-01

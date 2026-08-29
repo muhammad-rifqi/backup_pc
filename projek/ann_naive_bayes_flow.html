@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow ANN dengan Metode Naive Bayes - Manajemen Risiko Proyek</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .phase {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 6px solid #007bff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .phase:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .phase-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .phase-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .phase-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .process-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .process-box:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .process-title {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .process-content {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        
+        .arrow {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        
+        .arrow-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .highlight-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .method-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .method-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            text-align: center;
+        }
+        
+        .ann-box {
+            border-left: 6px solid #28a745;
+        }
+        
+        .nb-box {
+            border-left: 6px solid #dc3545;
+        }
+        
+        .integration-flow {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 2px dashed #667eea;
+        }
+        
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .step {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .step-arrow {
+            font-size: 1.5em;
+            color: #667eea;
+            margin: 0 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .method-comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .flow-steps {
+                flex-direction: column;
+            }
+            
+            .step-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Flow ANN dengan Metode Naive Bayes<br>untuk Manajemen Risiko Proyek</h1>
+        
+        <div class="highlight-box">
+            <div class="highlight-title">Integrasi Artificial Neural Network & Naive Bayes</div>
+            <p>Kombinasi pembelajaran mendalam (ANN) dengan klasifikasi probabilistik (Naive Bayes) untuk prediksi risiko proyek yang lebih akurat dan interpretable</p>
+        </div>
+        
+        <div class="flow-container">
+            <!-- Phase 1: Input Data -->
+            <div class="phase">
+                <div class="phase-header">
+                    <div class="phase-number">1</div>
+                    <h2 class="phase-title">Tahap Input Data & Preprocessing</h2>
+                </div>
+                <div class="process-grid">
+                    <div class="process-box">
+                        <div class="process-title">📊 Sumber Data Proyek</div>
+                        <div class="process-content">
+                            • Data historis proyek<br>
+                            • Anggaran & jadwal<br>
+                            • Kinerja tim<br>
+                            • Masalah yang pernah terjadi<br>
+                            • Faktor eksternal
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🗄️ Big Data Processing</div>
+                        <div class="process-content">
+                            • Pengumpulan data masif<br>
+                            • Cleaning & normalisasi<br>
+                            • Feature engineering<br>
+                            • Data labeling untuk training<br>
+                            • Data splitting (train/test)
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🔧 Preprocessing untuk ANN</div>
+                        <div class="process-content">
+                            • Normalisasi nilai numerik<br>
+                            • One-hot encoding kategorical<br>
+                            • Missing value handling<br>
+                            • Feature scaling<br>
+                            • Dimensionality reduction
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">📈 Preprocessing untuk Naive Bayes</div>
+                        <div class="process-content">
+                            • Diskretisasi nilai kontinyu<br>
+                            • Categorical encoding<br>
+                            • Feature selection<br>
+                            • Prior probability calculation<br>
+                            • Conditional probability setup
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">
+                <div class="arrow-icon">↓</div>
+            </div>
+            
+            <!-- Phase 2: Model Training -->
+            <div class="phase">
+                <div class="phase-header">
+                    <div class="phase-number">2</div>
+                    <h2 class="phase-title">Tahap Training Model</h2>
+                </div>
+                
+                <div class="method-comparison">
+                    <div class="method-box ann-box">
+                        <h3>🧠 Artificial Neural Network</h3>
+                        <p><strong>Arsitektur:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Input Layer: Fitur proyek</li>
+                            <li>Hidden Layers: 2-3 layers dengan ReLU</li>
+                            <li>Output Layer: Probabilitas risiko</li>
+                        </ul>
+                        <p><strong>Training:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Backpropagation algorithm</li>
+                            <li>Adam optimizer</li>
+                            <li>Cross-entropy loss</li>
+                            <li>Dropout regularization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="method-box nb-box">
+                        <h3>📊 Naive Bayes Classifier</h3>
+                        <p><strong>Jenis Model:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Gaussian NB: Fitur numerik</li>
+                            <li>Multinomial NB: Fitur kategorical</li>
+                            <li>Bernoulli NB: Fitur binary</li>
+                        </ul>
+                        <p><strong>Training:</strong></p>
+                        <ul style="text-align: left;">
+                            <li>Maximum likelihood estimation</li>
+                            <li>Laplace smoothing</li>
+                            <li>Prior probability calculation</li>
+                            <li>Conditional probability modeling</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="integration-flow">
+                    <h3 style="text-align: center; color: #2c3e50;">🔄 Integrasi Training ANN & Naive Bayes</h3>
+                    <div class="flow-steps">
+                        <div class="step">
+                            <strong>Step 1</strong><br>
+                            Training ANN untuk<br>
+                            feature extraction
+                        </div>
+                        <div class="step-arrow">→</div>
+                        <div class="step">
+                            <strong>Step 2</strong><br>
+                            Extract hidden layer<br>
+                            sebagai fitur baru
+                        </div>
+                        <div class="step-arrow">→</div>
+                        <div class="step">
+                            <strong>Step 3</strong><br>
+                            Training Naive Bayes<br>
+                            dengan fitur ANN
+                        </div>
+                        <div class="step-arrow">→</div>
+                        <div class="step">
+                            <strong>Step 4</strong><br>
+                            Ensemble learning:<br>
+                            Weighted combination
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">
+                <div class="arrow-icon">↓</div>
+            </div>
+            
+            <!-- Phase 3: Prediction & Analysis -->
+            <div class="phase">
+                <div class="phase-header">
+                    <div class="phase-number">3</div>
+                    <h2 class="phase-title">Tahap Prediksi & Analisis</h2>
+                </div>
+                <div class="process-grid">
+                    <div class="process-box">
+                        <div class="process-title">🎯 ANN Prediction</div>
+                        <div class="process-content">
+                            • Forward propagation<br>
+                            • Probabilitas risiko (0-1)<br>
+                            • Confidence score<br>
+                            • Feature importance dari gradients<br>
+                            • Non-linear pattern detection
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">📐 Naive Bayes Classification</div>
+                        <div class="process-content">
+                            • Posterior probability calculation<br>
+                            • P(Risk|Features) menggunakan Bayes theorem<br>
+                            • Interpretable probability<br>
+                            • Feature independence assumption<br>
+                            • Fast prediction time
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🔀 Ensemble Prediction</div>
+                        <div class="process-content">
+                            • Weighted average dari kedua model<br>
+                            • Confidence-based weighting<br>
+                            • Majority voting untuk klasifikasi<br>
+                            • Uncertainty quantification<br>
+                            • Robust final prediction
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🔍 Risk Analysis</div>
+                        <div class="process-content">
+                            • Identifikasi risiko tersembunyi<br>
+                            • Probabilitas & dampak estimation<br>
+                            • Risk category classification<br>
+                            • Time series risk forecasting<br>
+                            • Anomaly detection
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">
+                <div class="arrow-icon">↓</div>
+            </div>
+            
+            <!-- Phase 4: Output & Decision Support -->
+            <div class="phase">
+                <div class="phase-header">
+                    <div class="phase-number">4</div>
+                    <h2 class="phase-title">Output & Sistem Pendukung Keputusan</h2>
+                </div>
+                <div class="process-grid">
+                    <div class="process-box">
+                        <div class="process-title">⚠️ Early Warning System</div>
+                        <div class="process-content">
+                            • Real-time risk detection<br>
+                            • Automated alerts<br>
+                            • Risk threshold monitoring<br>
+                            • Predictive notifications<br>
+                            • Priority-based warning
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🛠️ Automated Recommendations</div>
+                        <div class="process-content">
+                            • Risk mitigation strategies<br>
+                            • Resource reallocation suggestions<br>
+                            • Schedule optimization<br>
+                            • Action plan generation<br>
+                            • Cost-benefit analysis
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">📊 Risk Visualization</div>
+                        <div class="process-content">
+                            • Interactive risk dashboard<br>
+                            • Heatmap visualization<br>
+                            • Trend analysis charts<br>
+                            • Risk probability graphs<br>
+                            • Real-time monitoring panels
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🎯 Model Interpretability</div>
+                        <div class="process-content">
+                            • Feature importance dari ANN<br>
+                            • Probabilistic reasoning dari NB<br>
+                            • SHAP values untuk explainability<br>
+                            • Decision path visualization<br>
+                            • Confidence intervals
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow">
+                <div class="arrow-icon">↓</div>
+            </div>
+            
+            <!-- Phase 5: Continuous Learning -->
+            <div class="phase">
+                <div class="phase-header">
+                    <div class="phase-number">5</div>
+                    <h2 class="phase-title">Continuous Learning & Adaptation</h2>
+                </div>
+                <div class="process-grid">
+                    <div class="process-box">
+                        <div class="process-title">🔄 Model Retraining</div>
+                        <div class="process-content">
+                            • Periodic model updates<br>
+                            • New data integration<br>
+                            • Performance monitoring<br>
+                            • Hyperparameter tuning<br>
+                            • Version control management
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">📈 Performance Evaluation</div>
+                        <div class="process-content">
+                            • Accuracy, Precision, Recall<br>
+                            • F1-score, AUC-ROC<br>
+                            • Confusion matrix analysis<br>
+                            • Cross-validation results<br>
+                            • A/B testing untuk ensemble
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🎯 Adaptive Learning</div>
+                        <div class="process-content">
+                            • Online learning capabilities<br>
+                            • Concept drift detection<br>
+                            • Transfer learning<br>
+                            • Domain adaptation<br>
+                            • Incremental learning
+                        </div>
+                    </div>
+                    <div class="process-box">
+                        <div class="process-title">🌐 Scalability & Integration</div>
+                        <div class="process-content">
+                            • Cloud deployment<br>
+                            • API integration<br>
+                            • Real-time processing<br>
+                            • Multi-project support<br>
+                            • Enterprise system integration
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box" style="margin-top: 30px;">
+            <div class="highlight-title">✨ Keunggulan Integrasi ANN & Naive Bayes</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px; text-align: left;">
+                <div>
+                    <strong>🎯 Akurasi Tinggi:</strong><br>
+                    Kombinasi deep learning dengan probabilistic reasoning
+                </div>
+                <div>
+                    <strong>⚡ Kecepatan Prediksi:</strong><br>
+                    Naive Bayes memberikan prediksi cepat untuk real-time
+                </div>
+                <div>
+                    <strong>🔍 Interpretabilitas:</strong><br>
+                    Naive Bayes menjelaskan "mengapa" prediksi dibuat
+                </div>
+                <div>
+                    <strong>🛡️ Robustness:</strong><br>
+                    Ensemble approach mengurangi overfitting dan bias
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
